@@ -6,8 +6,8 @@
   <name>app-platform-minimal</name>
   <artifactId>app-platform-minimal</artifactId>
   <groupId>org.folio</groupId>
-  <description>Minimal FOLIO platform installation for Poppy-SP1</description>
-  <version>0.0.9</version>
+  <description>Minimal FOLIO platform installation</description>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
