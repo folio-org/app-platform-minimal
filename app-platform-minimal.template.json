@@ -38,6 +38,10 @@
       "version": "1.2.0-SNAPSHOT"
     },
     {
+      "name": "mod-login-keycloak",
+      "version": "1.2.0-SNAPSHOT"
+    },
+    {
       "name": "mod-notes",
       "version": "5.2.0-SNAPSHOT"
     },
