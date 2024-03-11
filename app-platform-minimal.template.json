@@ -6,16 +6,8 @@
   "dependencies": [ ],
   "modules": [
     {
-      "name": "mod-configuration",
-      "version": "5.9.3-SNAPSHOT"
-    },
-    {
       "name": "mod-permissions",
       "version": "6.5.0-SNAPSHOT"
-    },
-    {
-      "name": "mod-tags",
-      "version": "2.1.1-SNAPSHOT"
     },
     {
       "name": "mod-users",
@@ -24,10 +16,6 @@
     {
       "name": "mod-users-bl",
       "version": "7.6.1-SNAPSHOT"
-    },
-    {
-      "name": "mod-password-validator",
-      "version": "3.1.1-SNAPSHOT"
     },
     {
       "name": "mod-users-keycloak",
@@ -42,16 +30,8 @@
       "version": "1.2.0-SNAPSHOT"
     },
     {
-      "name": "mod-notes",
-      "version": "5.2.0-SNAPSHOT"
-    },
-    {
       "name": "mod-scheduler",
       "version": "1.1.0-SNAPSHOT"
-    },
-    {
-      "name": "mod-settings",
-      "version": "1.0.3-SNAPSHOT"
     }
   ],
   "uiModules": [
