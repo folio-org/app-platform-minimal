@@ -28,3 +28,5 @@ Application descriptor repository for a minimal FOLIO platform installation
 | `folio_stripes-core`             |
 | `folio_notes`                    |
 | `folio_stripes-smart-components` |
+| `folio_authorization-policies`   |
+| `folio_authorization-roles`      |
