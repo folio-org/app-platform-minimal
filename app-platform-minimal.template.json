@@ -3,7 +3,7 @@
   "version": "${project.version}",
   "description": "${project.description}",
   "platform": "base",
-  "dependencies": [ ],
+  "dependencies": [],
   "modules": [
     {
       "name": "mod-configuration",
@@ -30,15 +30,15 @@
       "version": "latest"
     },
     {
+      "name": "mod-login-keycloak",
+      "version": "latest"
+    },
+    {
       "name": "mod-users-keycloak",
       "version": "latest"
     },
     {
       "name": "mod-roles-keycloak",
-      "version": "latest"
-    },
-    {
-      "name": "mod-login-keycloak",
       "version": "latest"
     },
     {
@@ -73,6 +73,14 @@
     },
     {
       "name": "folio_stripes-smart-components",
+      "version": "latest"
+    },
+    {
+      "name": "folio_authorization-policies",
+      "version": "latest"
+    },
+    {
+      "name": "folio_authorization-roles",
       "version": "latest"
     }
   ]
