@@ -18,6 +18,7 @@ Application descriptor repository for a minimal FOLIO platform installation
 | `mod-notes`              |
 | `mod-scheduler`          |
 | `mod-settings`           |
+| `mod-okapi-facade`       |
 
 ## UI Modules
 
