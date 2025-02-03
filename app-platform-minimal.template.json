@@ -27,7 +27,7 @@
     },
         {
       "name": "mod-password-validator",
-      "version": "3.3.0"
+      "version":"3.3.1-SNAPSHOT.157"
     },
         {
       "name": "mod-login-keycloak",
