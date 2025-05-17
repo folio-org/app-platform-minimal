@@ -1,7 +1,7 @@
 {
   "name": "${project.name}",
   "version": "${project.version}",
-  "description": "${project.description} used by OPAC, based on ${project.version}",
+  "description": "${project.description} used by OPAC, based on 1.0.37",
   "platform": "base",
   "dependencies": [],
   "modules":   [
