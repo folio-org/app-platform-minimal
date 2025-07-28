@@ -1,0 +1,91 @@
+{
+  "name": "app-platform-minimal",
+  "version": "2.1.0-SNAPSHOT",
+  "description": "Minimal FOLIO platform installation",
+  "platform": "base",
+  "dependencies": [],
+  "modules": [
+    {
+      "name": "mod-configuration",
+      "version": "5.13.0-SNAPSHOT.139"
+    },
+    {
+      "name": "mod-permissions",
+      "version": "6.8.0-SNAPSHOT.192"
+    },
+    {
+      "name": "mod-tags",
+      "version": "2.5.0-SNAPSHOT.116"
+    },
+    {
+      "name": "mod-users",
+      "version": "19.6.0-SNAPSHOT.361"
+    },
+    {
+      "name": "mod-users-bl",
+      "version": "7.11.0-SNAPSHOT.183"
+    },
+    {
+      "name": "mod-password-validator",
+      "version": "3.5.0-SNAPSHOT.99"
+    },
+    {
+      "name": "mod-login-keycloak",
+      "version": "3.1.0-SNAPSHOT.130"
+    },
+    {
+      "name": "mod-users-keycloak",
+      "version": "3.1.0-SNAPSHOT.172"
+    },
+    {
+      "name": "mod-roles-keycloak",
+      "version": "3.1.0-SNAPSHOT.239"
+    },
+    {
+      "name": "mod-notes",
+      "version": "7.1.0-SNAPSHOT.289"
+    },
+    {
+      "name": "mod-scheduler",
+      "version": "3.1.0-SNAPSHOT.133"
+    },
+    {
+      "name": "mod-settings",
+      "version": "1.3.0-SNAPSHOT.57"
+    },
+    {
+      "name": "mod-okapi-facade",
+      "version": "3.1.0-SNAPSHOT.70"
+    }
+  ],
+  "uiModules": [
+    {
+      "name": "folio_developer",
+      "version": "11.0.109900000000225"
+    },
+    {
+      "name": "folio_tags",
+      "version": "9.0.10990000000044"
+    },
+    {
+      "name": "folio_stripes-core",
+      "version": "11.1.109900000000967"
+    },
+    {
+      "name": "folio_notes",
+      "version": "12.0.109900000000114"
+    },
+    {
+      "name": "folio_stripes-smart-components",
+      "version": "10.1.109900000000553"
+    },
+    {
+      "name": "folio_authorization-policies",
+      "version": "2.0.10990000000095"
+    },
+    {
+      "name": "folio_authorization-roles",
+      "version": "2.1.109900000000207"
+    }
+  ]
+}
