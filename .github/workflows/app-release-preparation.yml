@@ -1,5 +1,7 @@
 name: Application Release Branch Preparation
 
+run-name: Application Release Branch Preparation [${{ inputs.dispatch_id }}]
+
 on:
   workflow_dispatch:
     inputs:
