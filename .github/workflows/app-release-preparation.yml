@@ -1,5 +1,4 @@
 name: Application Release Branch Preparation
-description: 'Individual app release preparation workflow'
 
 on:
   workflow_dispatch:
