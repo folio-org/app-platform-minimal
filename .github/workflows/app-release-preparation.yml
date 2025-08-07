@@ -40,7 +40,7 @@ permissions:
 jobs:
   prepare-app-release:
     name: Prepare Application Release
-    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation.yml@RANCHER-2320 # TODO: replace with a master branch when PR
+    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation.yml@master # TODO: replace with a master branch when PR
     with:
       app_name: ${{ github.repository }}
       previous_release_branch: ${{ inputs.previous_release_branch }}
@@ -54,7 +54,7 @@ jobs:
     name: Slack Notification
     needs: prepare-app-release
     if: always() && inputs.dry_run == false && vars.SLACK_NOTIF_CHANNEL != ''
-    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation-notification.yml@RANCHER-2320
+    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation-notification.yml@master
     with:
       app_name: ${{ github.repository }}
       new_release_branch: ${{ inputs.new_release_branch }}
