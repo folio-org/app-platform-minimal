@@ -40,7 +40,7 @@ permissions:
 jobs:
   prepare-app-release:
     name: Prepare Application Release
-    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation.yml@master # TODO: replace with a master branch when PR
+    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation.yml@master
     with:
       app_name: ${{ github.repository }}
       previous_release_branch: ${{ inputs.previous_release_branch }}
