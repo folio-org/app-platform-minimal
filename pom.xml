@@ -3,15 +3,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <name>app-platform-minimal</name>
+  <name>${project.name}</name>
   <artifactId>app-platform-minimal</artifactId>
   <groupId>org.folio</groupId>
   <description>Minimal FOLIO platform installation</description>
   <version>2.1.0-SNAPSHOT</version>
 
   <properties>
+    <project.name>app-platform-minimal</project.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <folio-application-generator.version>1.2.0-SNAPSHOT</folio-application-generator.version>
+    <templatePath>${basedir}/${project.name}.template.json</templatePath>
   </properties>
 
   <build>
@@ -28,7 +30,7 @@
           </execution>
         </executions>
         <configuration>
-          <templatePath>${basedir}/app-platform-minimal.template.json</templatePath>
+          <templatePath>${templatePath}</templatePath>
           <moduleRegistries>
             <registry>
               <type>okapi</type>
@@ -80,9 +82,9 @@
   </pluginRepositories>
 
   <scm>
-    <url>https://https://github.com/folio-org/app-platform-minimal</url>
-    <connection>scm:git:git://github.com:folio-org/app-platform-minimal.git</connection>
-    <developerConnection>scm:git:git@github.com:folio-org/app-platform-minimal.git</developerConnection>
+    <url>https://github.com/folio-org/${project.name}</url>
+    <connection>scm:git:git://github.com:folio-org/${project.name}.git</connection>
+    <developerConnection>scm:git:git@github.com:folio-org/${project.name}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 </project>
