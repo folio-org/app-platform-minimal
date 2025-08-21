@@ -1,0 +1,92 @@
+name: Update Snapshot Application
+
+run-name: Update Snapshot Application ${{ github.event_name == 'schedule' && '[scheduled]' || '' }}
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+
+  workflow_dispatch:
+    inputs:
+      descriptor_build_offset:
+        description: 'Offset to apply to application artifact version'
+        required: false
+        type: string
+        default: '100100000000000'
+      rely_on_FAR:
+        description: 'Whether to rely on FAR for application descriptor dependencies'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Perform dry run without making changes'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-platform-descriptor:
+    name: Fetch Platform Descriptor
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platform Repository
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.rely_on_FAR) }}
+        uses: actions/checkout@v4
+        with:
+          repository: folio-org/platform-lsp
+          ref: snapshot
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Platform Descriptor
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.rely_on_FAR) }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: platform-descriptor
+          path: platform-descriptor.json
+          retention-days: 1
+
+  update-application:
+    name: Update Application
+    needs: fetch-platform-descriptor
+    uses: folio-org/kitfox-github/.github/workflows/app-update.yml@master
+    with:
+      app_name: ${{ github.event.repository.name }}
+      repo: ${{ github.repository }}
+      workflow_run_number: ${{ github.run_number }}
+      descriptor_build_offset: ${{ github.event_name == 'workflow_dispatch' && inputs.descriptor_build_offset || '100100000000000' }}
+      rely_on_FAR: ${{ github.event_name == 'workflow_dispatch' && inputs.rely_on_FAR || false }}
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+    secrets: inherit
+
+  slack_notification:
+    name: Slack Notification
+    needs: update-application
+    if: always() && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) &&
+      (needs.update-application.result != 'success' || 
+        needs.update-application.result == 'success' && needs.update-application.outputs.updated == 'true') && 
+      vars.SLACK_NOTIF_CHANNEL != ''
+    uses: folio-org/kitfox-github/.github/workflows/app-update-notification.yml@master
+    with:
+      app_name: ${{ github.event.repository.name }}
+      repo: ${{ github.repository }}
+      new_version: ${{ needs.update-application.outputs.new_version }}
+      previous_version: ${{ needs.update-application.outputs.previous_version }}
+      updated_cnt: ${{ needs.update-application.outputs.updated_cnt }}
+      updated_modules: ${{ needs.update-application.outputs.updated_modules }}
+      updated_modules_b64: ${{ needs.update-application.outputs.updated_modules_b64 }}
+      failure_reason: ${{ needs.update-application.outputs.failure_reason }}
+      commit_sha: ${{ needs.update-application.outputs.commit_sha }}
+      app_descriptor_file_name: ${{ needs.update-application.outputs.app_descriptor_file_name }}
+      app_descriptor_url: ${{ needs.update-application.outputs.app_descriptor_url }}
+      workflow_result: ${{ needs.update-application.result }}
+      workflow_run_id: ${{ github.run_id }}
+      workflow_run_number: ${{ github.run_number }}
+      slack_notif_channel: ${{ vars.SLACK_NOTIF_CHANNEL }}
+    secrets: inherit
