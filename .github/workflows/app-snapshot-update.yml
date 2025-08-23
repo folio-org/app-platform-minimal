@@ -80,7 +80,6 @@ jobs:
       previous_version: ${{ needs.update-application.outputs.previous_version }}
       updated_cnt: ${{ needs.update-application.outputs.updated_cnt }}
       updated_modules: ${{ needs.update-application.outputs.updated_modules }}
-      updated_modules_b64: ${{ needs.update-application.outputs.updated_modules_b64 }}
       failure_reason: ${{ needs.update-application.outputs.failure_reason }}
       commit_sha: ${{ needs.update-application.outputs.commit_sha }}
       app_descriptor_file_name: ${{ needs.update-application.outputs.app_descriptor_file_name }}
