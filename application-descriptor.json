@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000000112",
+  "version": "2.1.0-SNAPSHOT.100000000000001",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -23,7 +23,7 @@
     },
     {
       "name": "mod-users-bl",
-      "version": "7.11.0-SNAPSHOT.184"
+      "version": "7.11.0-SNAPSHOT.183"
     },
     {
       "name": "mod-password-validator",
@@ -31,61 +31,61 @@
     },
     {
       "name": "mod-login-keycloak",
-      "version": "3.1.0-SNAPSHOT.140"
+      "version": "3.1.0-SNAPSHOT.130"
     },
     {
       "name": "mod-users-keycloak",
-      "version": "3.1.0-SNAPSHOT.183"
+      "version": "3.1.0-SNAPSHOT.172"
     },
     {
       "name": "mod-roles-keycloak",
-      "version": "3.1.0-SNAPSHOT.260"
+      "version": "3.1.0-SNAPSHOT.239"
     },
     {
       "name": "mod-notes",
-      "version": "7.1.0-SNAPSHOT.290"
+      "version": "7.1.0-SNAPSHOT.289"
     },
     {
       "name": "mod-scheduler",
-      "version": "3.1.0-SNAPSHOT.140"
+      "version": "3.1.0-SNAPSHOT.133"
     },
     {
       "name": "mod-settings",
-      "version": "1.3.0-SNAPSHOT.58"
+      "version": "1.3.0-SNAPSHOT.57"
     },
     {
       "name": "mod-okapi-facade",
-      "version": "3.1.0-SNAPSHOT.75"
+      "version": "3.1.0-SNAPSHOT.70"
     }
   ],
   "uiModules": [
     {
       "name": "folio_developer",
-      "version": "11.0.109900000000243"
+      "version": "11.0.109900000000225"
     },
     {
       "name": "folio_tags",
-      "version": "9.0.10990000000051"
+      "version": "9.0.10990000000044"
     },
     {
       "name": "folio_stripes-core",
-      "version": "11.1.1099000000001009"
+      "version": "11.1.109900000000967"
     },
     {
       "name": "folio_notes",
-      "version": "12.0.109900000000126"
+      "version": "12.0.109900000000114"
     },
     {
       "name": "folio_stripes-smart-components",
-      "version": "10.1.109900000000581"
+      "version": "10.1.109900000000553"
     },
     {
       "name": "folio_authorization-policies",
-      "version": "2.0.109900000000102"
+      "version": "2.0.10990000000095"
     },
     {
       "name": "folio_authorization-roles",
-      "version": "2.1.109900000000214"
+      "version": "2.1.109900000000207"
     }
   ]
 }
