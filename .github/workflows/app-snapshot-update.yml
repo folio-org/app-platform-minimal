@@ -66,12 +66,22 @@ jobs:
     secrets: inherit
 
   slack_notification:
-    name: Slack Notification
+    name: Slack Notification ${{ matrix.channel }}
     needs: update-application
-    if: always() && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) &&
-      (needs.update-application.result != 'success' || 
-        needs.update-application.result == 'success' && needs.update-application.outputs.updated == 'true') && 
-      vars.SLACK_NOTIF_CHANNEL != ''
+    strategy:
+      matrix:
+        channel: ${{ fromJSON(
+          vars.SLACK_NOTIF_CHANNEL != '' && format('["{0}","{1}"]', vars.GENERAL_SLACK_NOTIF_CHANNEL, vars.SLACK_NOTIF_CHANNEL)
+          || format('["{0}"]', vars.GENERAL_SLACK_NOTIF_CHANNEL)
+          || '[]'
+          ) }}
+    if: >
+      always() &&
+      !(github.event_name == 'workflow_dispatch' && inputs.dry_run) &&
+      (
+        needs.update-application.result != 'success' ||
+        (needs.update-application.result == 'success' && needs.update-application.outputs.updated == 'true')
+      )
     uses: folio-org/kitfox-github/.github/workflows/app-update-notification.yml@master
     with:
       app_name: ${{ github.event.repository.name }}
@@ -87,5 +97,5 @@ jobs:
       workflow_result: ${{ needs.update-application.result }}
       workflow_run_id: ${{ github.run_id }}
       workflow_run_number: ${{ github.run_number }}
-      slack_notif_channel: ${{ vars.SLACK_NOTIF_CHANNEL }}
+      slack_notif_channel: ${{ matrix.channel }}
     secrets: inherit
