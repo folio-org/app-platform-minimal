@@ -51,6 +51,31 @@ jobs:
       dry_run: ${{ inputs.dry_run }}      
     secrets: inherit
 
+    
+  workflow-summary:
+    name: Workflow Summary
+    runs-on: ubuntu-latest
+    needs: prepare-app-release
+    if: always()
+    steps:
+      - name: Display Summary
+        run: |
+          set -eo pipefail
+
+          echo "::notice::${{ github.event.repository.name }} Release Preparation Summary"
+          echo ""
+          echo "Previous Release: ${{ inputs.previous_release_branch }}"
+          echo "New Release: ${{ inputs.new_release_branch }}"
+          echo "Source Branch: ${{ needs.prepare-app-release.outputs.source_branch }}"
+          echo "New Version: ${{ needs.prepare-app-release.outputs.app_version }}"
+          echo "Commit: ${{ needs.prepare-app-release.outputs.commit_sha }}"
+          echo ""
+          
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "::notice::This was a dry run - no actual changes were made"
+            echo "::notice::Set dry_run=false to apply changes"
+          fi
+          
   slack_notification:
     name: Slack Notification
     needs: prepare-app-release
