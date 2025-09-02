@@ -84,7 +84,16 @@ jobs:
             echo "- **Event**: ${{ github.event_name == 'schedule' && 'Scheduled' || 'Manual' }}"
             echo ""
             
-            if [[ "${{ needs.update-application.result }}" == "success" ]]; then
+            if [[ "${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}" == "true" ]]; then
+              echo "### 🏃 Dry Run Mode"
+              echo ""
+              echo "This was a dry run - no actual changes were made."
+              echo "- Module updates were checked but not committed"
+              echo "- Application descriptor was generated but not pushed"
+              echo ""
+              echo "Set \`dry_run=false\` to apply changes."
+              echo ""
+            elif [[ "${{ needs.update-application.result }}" == "success" ]]; then
               if [[ "${{ needs.update-application.outputs.updated }}" == "true" ]]; then
                 echo "### ✅ Modules Updated Successfully"
                 echo "- **Previous Version**: ${{ needs.update-application.outputs.previous_version }}"
@@ -117,13 +126,6 @@ jobs:
               echo "- Check the job logs for detailed error information"
               echo "- Verify module registry accessibility"
               echo "- Ensure proper permissions for repository updates"
-            fi
-            
-            if [[ "${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}" == "true" ]]; then
-              echo ""
-              echo "### 🏃 Dry Run Mode"
-              echo "This was a dry run - no actual changes were made."
-              echo "Set \`dry_run=false\` to apply changes."
             fi
             
             echo ""
