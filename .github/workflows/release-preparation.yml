@@ -105,7 +105,7 @@ jobs:
     name: Slack Notification
     needs: prepare-app-release
     if: always() && inputs.dry_run == false && vars.SLACK_NOTIF_CHANNEL != ''
-    uses: folio-org/kitfox-github/.github/workflows/app-release-preparation-notification.yml@master
+    uses: folio-org/kitfox-github/.github/workflows/release-preparation-notification.yml@master
     with:
       app_name: ${{ github.repository }}
       new_release_branch: ${{ inputs.new_release_branch }}
