@@ -1,4 +1,4 @@
-name: Application Release Branch Preparation
+name: Release preparation
 
 run-name: Application Release Branch Preparation${{ inputs.dispatch_id != '' && format(' [{0}]', inputs.dispatch_id) || '' }}
 
