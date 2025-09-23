@@ -26,7 +26,7 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <folio-application-generator.version>1.1.0</folio-application-generator.version>
+    <folio-application-generator.version>1.2.0-SNAPSHOT</folio-application-generator.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.name>app-platform-minimal</project.name>
     <templatePath>${basedir}/${project.name}.template.json</templatePath>
