@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000000572",
+  "version": "2.1.0-SNAPSHOT.100100000000715",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -39,7 +39,7 @@
     },
     {
       "name": "mod-roles-keycloak",
-      "version": "3.1.0-SNAPSHOT.267"
+      "version": "3.1.0-SNAPSHOT.268"
     },
     {
       "name": "mod-notes",
