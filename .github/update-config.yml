@@ -11,8 +11,8 @@ branches:
   - snapshot:
       enabled: false
       need_pr: false
-      pre_release: only
+      pre_release: "only"
 #  - R2-2024:
 #      enable: false
 #      need_pr: true
-#      pre_release: false
+#      pre_release: "false"
