@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000002015",
+  "version": "2.1.0-SNAPSHOT.100100000002030",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -43,7 +43,7 @@
     },
     {
       "name": "mod-notes",
-      "version": "7.1.0-SNAPSHOT.296"
+      "version": "7.1.0-SNAPSHOT.297"
     },
     {
       "name": "mod-scheduler",
@@ -69,7 +69,7 @@
     },
     {
       "name": "folio_stripes-core",
-      "version": "11.1.1099000000001233"
+      "version": "11.1.1099000000001236"
     },
     {
       "name": "folio_notes",
