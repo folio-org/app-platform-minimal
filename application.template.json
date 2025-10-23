@@ -1,0 +1,111 @@
+{
+  "name": "${project.name}",
+  "version": "${project.version}",
+  "description": "${project.description}",
+  "platform": "base",
+  "dependencies": [],
+  "modules": [
+    {
+      "name": "mod-configuration",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-permissions",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-tags",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-users",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-users-bl",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-password-validator",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-login-keycloak",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-users-keycloak",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-roles-keycloak",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-notes",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-scheduler",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-settings",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "mod-okapi-facade",
+        "version": "latest",
+        "preRelease": "only"
+    }
+  ],
+  "uiModules": [
+    {
+      "name": "folio_developer",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_tags",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_stripes-core",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_notes",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_stripes-smart-components",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_authorization-policies",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
+      "name": "folio_authorization-roles",
+        "version": "latest",
+        "preRelease": "only"
+    }
+  ]
+}
