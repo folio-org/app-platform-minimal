@@ -41,5 +41,4 @@ jobs:
       descriptor_build_offset: ${{ github.event_name == 'workflow_dispatch' && inputs.descriptor_build_offset || '100100000000000' }}
       rely_on_FAR: ${{ github.event_name == 'workflow_dispatch' && inputs.rely_on_FAR || false }}
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
-      is_scheduled: ${{ github.event_name == 'schedule' }}
     secrets: inherit
