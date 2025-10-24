@@ -1,13 +1,13 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000002064",
+  "version": "2.1.0-SNAPSHOT.100100000002089",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
   "modules": [
     {
       "name": "mod-configuration",
-      "version": "5.13.0-SNAPSHOT.139"
+      "version": "5.12.0-SNAPSHOT.138"
     },
     {
       "name": "mod-permissions",
