@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000002284",
+  "version": "2.1.0-SNAPSHOT.100100000002286",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -43,7 +43,7 @@
     },
     {
       "name": "mod-notes",
-      "version": "7.1.0-SNAPSHOT.297"
+      "version": "7.1.0-SNAPSHOT.298"
     },
     {
       "name": "mod-scheduler",
