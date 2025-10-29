@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100100000002371",
+  "version": "2.1.0-SNAPSHOT.100100000002444",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -65,7 +65,7 @@
     },
     {
       "name": "folio_tags",
-      "version": "9.0.1099000000000066"
+      "version": "9.0.1099000000000070"
     },
     {
       "name": "folio_stripes-core",
@@ -73,7 +73,7 @@
     },
     {
       "name": "folio_notes",
-      "version": "12.0.109900000000126"
+      "version": "12.0.1099000000000134"
     },
     {
       "name": "folio_stripes-smart-components",
