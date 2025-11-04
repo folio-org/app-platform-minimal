@@ -12,7 +12,7 @@ branches:
       enabled: true
       need_pr: false
       pre_release: "only"
-      descriptor_build_offset: "100100000000000"
+      descriptor_build_offset: "100200000000000"
 #  - R2-2024:
 #      enable: false
 #      need_pr: true
