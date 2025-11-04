@@ -1,21 +1,21 @@
-name: Release update scheduler
+name: Application Update Scheduler
 
-run-name: Release update scheduler ${{ github.event_name == 'workflow_dispatch' && '[manual]' || '' }}
+run-name: Application update scheduler ${{ github.event_name == 'workflow_dispatch' && '[manual]' || '' }}
 
 on:
   schedule:
     - cron: "*/20 * * * *"
-  
+
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Perform dry run without creating PRs'
+        description: 'Perform dry run without creating PRs or committing changes'
         required: false
         type: boolean
         default: false
 
 concurrency:
-  group: release-scan-${{ github.repository }}
+  group: update-scan-${{ github.repository }}
   cancel-in-progress: false
 
 permissions:
@@ -33,14 +33,13 @@ jobs:
       pr_reviewers: ${{ steps.get-config.outputs.pr_reviewers }}
       pr_labels: ${{ steps.get-config.outputs.pr_labels }}
       branch_config: ${{ steps.get-config.outputs.branch_config }}
-    steps:         
-      - name: Get Release Configuration
+    steps:
+      - name: Get Update Configuration
         id: get-config
         uses: folio-org/kitfox-github/.github/actions/get-update-config@master
         with:
           repo: ${{ github.repository }}
           github_token: ${{ github.token }}
-      
 
   update-branches:
     name: Update ${{ matrix.branch }}
@@ -51,10 +50,17 @@ jobs:
         include: ${{ fromJson(needs.get-config.outputs.branch_config) }}
       fail-fast: false
       max-parallel: 3
-    uses: folio-org/kitfox-github/.github/workflows/release-update.yml@master
+    uses: folio-org/kitfox-github/.github/workflows/application-update.yml@master
     with:
-      release_branch: ${{ matrix.branch }}
+      app_name: ${{ github.event.repository.name }}
+      repo: ${{ github.repository }}
+      branch: ${{ matrix.branch }}
       update_branch: ${{ matrix.update_branch }}
+      need_pr: ${{ matrix.need_pr }}
+      pre_release: ${{ matrix.pre_release }}
+      workflow_run_number: ${{ github.run_number }}
+      descriptor_build_offset: ${{ matrix.descriptor_build_offset }}
+      rely_on_FAR: ${{ matrix.rely_on_FAR }}
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
       pr_reviewers: ${{ needs.get-config.outputs.pr_reviewers }}
       pr_labels: ${{ needs.get-config.outputs.pr_labels }}
