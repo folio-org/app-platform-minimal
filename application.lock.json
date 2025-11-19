@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100200000000915",
+  "version": "2.1.0-SNAPSHOT.100200000000977",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -31,11 +31,11 @@
     },
     {
       "name": "mod-login-keycloak",
-      "version": "3.1.0-SNAPSHOT.152"
+      "version": "3.1.0-SNAPSHOT.153"
     },
     {
       "name": "mod-users-keycloak",
-      "version": "3.1.0-SNAPSHOT.200"
+      "version": "3.1.0-SNAPSHOT.201"
     },
     {
       "name": "mod-roles-keycloak",
