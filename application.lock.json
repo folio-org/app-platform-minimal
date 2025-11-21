@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100200000001081",
+  "version": "2.1.0-SNAPSHOT.100200000001082",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -73,7 +73,7 @@
     },
     {
       "name": "folio_notes",
-      "version": "12.0.1099000000000134"
+      "version": "12.0.1099000000000138"
     },
     {
       "name": "folio_stripes-smart-components",
@@ -81,11 +81,11 @@
     },
     {
       "name": "folio_authorization-policies",
-      "version": "2.0.109900000000102"
+      "version": "2.0.1099000000000111"
     },
     {
       "name": "folio_authorization-roles",
-      "version": "2.1.109900000000214"
+      "version": "2.1.1099000000000223"
     }
   ]
 }
