@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100200000001113",
+  "version": "2.1.0-SNAPSHOT.100200000001247",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -39,7 +39,7 @@
     },
     {
       "name": "mod-roles-keycloak",
-      "version": "3.1.0-SNAPSHOT.280"
+      "version": "3.1.0-SNAPSHOT.281"
     },
     {
       "name": "mod-notes",
@@ -47,7 +47,7 @@
     },
     {
       "name": "mod-scheduler",
-      "version": "3.1.0-SNAPSHOT.156"
+      "version": "3.1.0-SNAPSHOT.157"
     },
     {
       "name": "mod-settings",
