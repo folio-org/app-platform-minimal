@@ -7,7 +7,7 @@
   <artifactId>app-platform-minimal</artifactId>
   <groupId>org.folio</groupId>
   <description>Minimal FOLIO platform installation</description>
-  <version>2.2.0-SNAPSHOT</version>
+  <version>2.1.0</version>
 
   <properties>
     <project.name>app-platform-minimal</project.name>
