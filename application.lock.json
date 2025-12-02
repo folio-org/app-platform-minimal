@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100200000001730",
+  "version": "2.1.0-SNAPSHOT.100200000001797",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -43,7 +43,7 @@
     },
     {
       "name": "mod-notes",
-      "version": "7.1.0-SNAPSHOT.301"
+      "version": "7.1.0-SNAPSHOT.302"
     },
     {
       "name": "mod-scheduler",
@@ -61,11 +61,11 @@
   "uiModules": [
     {
       "name": "folio_developer",
-      "version": "11.0.1099000000000266"
+      "version": "11.0.1099000000000270"
     },
     {
       "name": "folio_tags",
-      "version": "9.0.1099000000000074"
+      "version": "9.0.1099000000000078"
     },
     {
       "name": "folio_stripes-core",
