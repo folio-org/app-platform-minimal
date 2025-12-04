@@ -1,6 +1,6 @@
 {
   "name": "app-platform-minimal",
-  "version": "2.1.0-SNAPSHOT.100200000001849",
+  "version": "2.1.0-SNAPSHOT.100200000001924",
   "description": "Minimal FOLIO platform installation",
   "platform": "base",
   "dependencies": [],
@@ -61,7 +61,7 @@
   "uiModules": [
     {
       "name": "folio_developer",
-      "version": "11.0.1099000000000270"
+      "version": "11.0.1099000000000279"
     },
     {
       "name": "folio_tags",
