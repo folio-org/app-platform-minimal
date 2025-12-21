@@ -12,7 +12,7 @@
   <properties>
     <project.name>app-platform-minimal</project.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <folio-application-generator.version>1.2.0</folio-application-generator.version>
+    <folio-application-generator.version>1.3.0</folio-application-generator.version>
     <templatePath>${basedir}/${project.name}.template.json</templatePath>
   </properties>
 
