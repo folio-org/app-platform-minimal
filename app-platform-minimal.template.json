@@ -3,88 +3,88 @@
   "version": "${project.version}",
   "description": "${project.description}",
   "dependencies": [],
-  "modules": [
-    {
-      "name": "mod-configuration",
-      "version": "latest"
-    },
-    {
-      "name": "mod-permissions",
-      "version": "latest"
-    },
-    {
-      "name": "mod-tags",
-      "version": "latest"
-    },
-    {
-      "name": "mod-users",
-      "version": "latest"
-    },
-    {
-      "name": "mod-users-bl",
-      "version": "latest"
-    },
-    {
-      "name": "mod-password-validator",
-      "version": "latest"
-    },
-    {
-      "name": "mod-login-keycloak",
-      "version": "latest"
-    },
-    {
-      "name": "mod-users-keycloak",
-      "version": "latest"
-    },
-    {
+  "modules":   [
+        {
       "name": "mod-roles-keycloak",
-      "version": "latest"
+      "version": "3.0.13"
     },
-    {
+        {
+      "name": "mod-users-keycloak",
+      "version": "3.0.11"
+    },
+        {
+      "name": "mod-configuration",
+      "version": "5.12.0"
+    },
+        {
+      "name": "mod-permissions",
+      "version": "6.7.1"
+    },
+        {
+      "name": "mod-tags",
+      "version": "2.4.1"
+    },
+        {
+      "name": "mod-users",
+      "version": "19.5.2"
+    },
+        {
+      "name": "mod-users-bl",
+      "version": "7.10.3"
+    },
+        {
+      "name": "mod-password-validator",
+      "version": "3.4.0"
+    },
+        {
+      "name": "mod-login-keycloak",
+      "version": "3.0.4"
+    },
+        {
       "name": "mod-notes",
-      "version": "latest"
+      "version": "7.0.0"
     },
-    {
+        {
       "name": "mod-scheduler",
-      "version": "latest"
+      "version": "3.0.5"
     },
-    {
+        {
       "name": "mod-settings",
-      "version": "latest"
+      "version": "1.2.0"
     },
-    {
+        {
       "name": "mod-okapi-facade",
-      "version": "latest"
+      "version": "3.0.0"
     }
   ],
-  "uiModules": [
-    {
+  "uiModules":   [
+        {
       "name": "folio_developer",
-      "version": "latest"
+      "version": "10.0.2"
     },
-    {
-      "name": "folio_tags",
-      "version": "latest"
-    },
-    {
-      "name": "folio_stripes-core",
-      "version": "latest"
-    },
-    {
-      "name": "folio_notes",
-      "version": "latest"
-    },
-    {
+        {
       "name": "folio_stripes-smart-components",
-      "version": "latest"
+      "version": "10.0.3"
     },
-    {
+        {
+      "name": "folio_stripes-core",
+      "version": "11.0.13"
+    },
+        {
+      "name": "folio_tags",
+      "version": "9.0.0"
+    },
+        {
+      "name": "folio_notes",
+      "version": "11.0.0"
+    },
+        {
       "name": "folio_authorization-policies",
-      "version": "latest"
+      "version": "2.0.0"
     },
-    {
+        {
       "name": "folio_authorization-roles",
-      "version": "latest"
+      "version": "2.0.3"
     }
   ]
 }
