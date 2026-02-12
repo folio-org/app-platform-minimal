@@ -56,6 +56,10 @@
     {
       "name": "mod-okapi-facade",
       "version": "latest"
+    },
+    {
+      "name": "edge-users",
+      "version": "latest"
     }
   ],
   "uiModules": [
