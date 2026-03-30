@@ -6,7 +6,6 @@ update_config:
   pr_reviewers:
     - folio-org/kitfox
     - folio-org/eureka
-
   ruleset:
     enabled: true
     pattern: "{0}-eureka-ci"
@@ -24,7 +23,6 @@ update_config:
     bypass_actors:
       - actor_type: "Integration"
         bypass_mode: "always"
-
 branches:
   - snapshot:
       enabled: true
@@ -33,6 +31,12 @@ branches:
       descriptor_build_offset: "100200000000000"
       ruleset:
         enabled: false
+  - R1-2025-ci:
+      enabled: true
+      need_pr: true
+      preRelease: "false"
+      ruleset:
+        enabled: true
 #  - R2-2024:
 #      enable: false
 #      need_pr: true
