@@ -64,4 +64,7 @@ jobs:
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
       pr_reviewers: ${{ needs.get-config.outputs.pr_reviewers }}
       pr_labels: ${{ needs.get-config.outputs.pr_labels }}
+      skip_interface_validation: ${{ matrix.skip_interface_validation }}
+      skip_dependency_validation: ${{ matrix.skip_dependency_validation }}
+      publish: ${{ matrix.publish }}
     secrets: inherit
