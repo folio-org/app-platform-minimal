@@ -67,5 +67,4 @@ jobs:
       skip_interface_validation: ${{ matrix.skip_interface_validation }}
       skip_dependency_validation: ${{ matrix.skip_dependency_validation }}
       publish: ${{ matrix.publish }}
-      release: ${{ matrix.release }}
     secrets: inherit
