@@ -40,3 +40,9 @@ branches:
       release: false #TODO: enable when FSE disables its release pipeline
       ruleset:
         enabled: true
+  - R1-2026:
+      enabled: true
+      need_pr: true
+      preRelease: "false"
+      ruleset:
+        enabled: true
