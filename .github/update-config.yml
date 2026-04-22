@@ -36,8 +36,6 @@ branches:
       enabled: true
       need_pr: true
       preRelease: "false"
-      publish: false #TODO: enable when FSE disables its release pipeline
-      release: false #TODO: enable when FSE disables its release pipeline
       ruleset:
         enabled: true
   - R1-2026:
