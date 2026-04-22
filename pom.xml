@@ -7,12 +7,12 @@
   <artifactId>app-platform-minimal</artifactId>
   <groupId>org.folio</groupId>
   <description>Minimal FOLIO platform installation</description>
-  <version>3.0.0</version>
+  <version>2.1.0</version>
 
   <properties>
     <project.name>app-platform-minimal</project.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <folio-application-generator.version>1.4.0-SNAPSHOT</folio-application-generator.version>
+    <folio-application-generator.version>1.4.0</folio-application-generator.version>
     <templatePath>${basedir}/application.template.json</templatePath>
   </properties>
 
