@@ -11,6 +11,11 @@ on:
         required: false
         type: string
         default: ''
+      base_branch:
+        description: 'Release branch the commit belongs to (defaults to dispatch branch)'
+        required: false
+        type: string
+        default: ''
       release_notes:
         description: 'Release notes body text'
         required: false
@@ -30,7 +35,7 @@ jobs:
       repo_owner: ${{ github.repository_owner }}
       repo_name: ${{ github.event.repository.name }}
       commit_sha: ${{ inputs.commit_sha }}
-      base_branch: ${{ github.ref_name }}
+      base_branch: ${{ inputs.base_branch != '' && inputs.base_branch || github.ref_name }}
       release_notes: ${{ inputs.release_notes }}
       dry_run: ${{ inputs.dry_run }}
     secrets: inherit
