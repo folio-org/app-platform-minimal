@@ -71,6 +71,11 @@
         "preRelease": "only"
     },
     {
+      "name": "mod-locations",
+        "version": "latest",
+        "preRelease": "only"
+    },
+    {
       "name": "edge-users",
         "version": "latest",
         "preRelease": "only"

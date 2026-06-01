@@ -58,6 +58,10 @@
       "version": "latest"
     },
     {
+      "name": "mod-locations",
+      "version": "latest"
+    },
+    {
       "name": "edge-users",
       "version": "latest"
     }
