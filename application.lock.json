@@ -1,9 +1,24 @@
 {
-  "id": "app-platform-minimal-2.0.51",
+  "id": "app-platform-minimal-2.0.52",
   "name": "app-platform-minimal",
-  "version": "2.0.51",
+  "version": "2.0.52",
   "description": "Minimal FOLIO platform installation",
   "modules":   [
+        {
+      "id": "mod-roles-keycloak-3.0.15",
+      "name": "mod-roles-keycloak",
+      "version": "3.0.15"
+    },
+        {
+      "id": "mod-scheduler-3.0.9",
+      "name": "mod-scheduler",
+      "version": "3.0.9"
+    },
+        {
+      "id": "mod-users-keycloak-3.0.13",
+      "name": "mod-users-keycloak",
+      "version": "3.0.13"
+    },
         {
       "id": "mod-configuration-5.12.1",
       "name": "mod-configuration",
@@ -20,24 +35,9 @@
       "version": "7.10.4"
     },
         {
-      "id": "mod-scheduler-3.0.8",
-      "name": "mod-scheduler",
-      "version": "3.0.8"
-    },
-        {
-      "id": "mod-roles-keycloak-3.0.14",
-      "name": "mod-roles-keycloak",
-      "version": "3.0.14"
-    },
-        {
       "id": "mod-users-19.5.4",
       "name": "mod-users",
       "version": "19.5.4"
-    },
-        {
-      "id": "mod-users-keycloak-3.0.12",
-      "name": "mod-users-keycloak",
-      "version": "3.0.12"
     },
         {
       "id": "mod-permissions-6.7.1",
@@ -2444,7 +2444,7 @@
       }
     },
         {
-      "id": "mod-users-keycloak-3.0.12",
+      "id": "mod-users-keycloak-3.0.13",
       "name": "Users business logic (with Keycloak)",
       "provides":       [
                 {
@@ -2831,7 +2831,7 @@
         }
       ],
       "launchDescriptor":       {
-        "dockerImage": "mod-users-keycloak:3.0.12",
+        "dockerImage": "mod-users-keycloak:3.0.13",
         "dockerPull": false,
         "dockerArgs": {"HostConfig":         {
           "Memory": 536870912,
@@ -2844,7 +2844,7 @@
       }
     },
         {
-      "id": "mod-roles-keycloak-3.0.14",
+      "id": "mod-roles-keycloak-3.0.15",
       "name": "roles-keycloak",
       "requires": [      {
         "id": "permissions",
@@ -3526,7 +3526,7 @@
         }
       ],
       "launchDescriptor":       {
-        "dockerImage": "mod-roles-keycloak-3.0.14",
+        "dockerImage": "mod-roles-keycloak-3.0.15",
         "dockerPull": false,
         "dockerArgs": {"HostConfig":         {
           "Memory": 357913941,
@@ -3846,7 +3846,7 @@
       }
     },
         {
-      "id": "mod-scheduler-3.0.8",
+      "id": "mod-scheduler-3.0.9",
       "name": "Scheduler",
       "provides":       [
                 {
@@ -3940,7 +3940,7 @@
         }
       ],
       "launchDescriptor":       {
-        "dockerImage": "mod-scheduler:3.0.8",
+        "dockerImage": "mod-scheduler:3.0.9",
         "dockerPull": false,
         "dockerArgs": {"HostConfig":         {
           "Memory": 542293850,
