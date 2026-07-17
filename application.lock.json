@@ -1,9 +1,13 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010686",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010698",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010686",
+  "version" : "2.2.0-SNAPSHOT.100200000010698",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2144",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2144"
+  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2019"
@@ -40,10 +44,6 @@
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2452"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2140",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2140"
-  }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2184",
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2184"
@@ -65,10 +65,6 @@
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_notes-12.0.1099000000000187",
-    "name" : "folio_notes",
-    "version" : "12.0.1099000000000187"
-  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -80,6 +76,10 @@
     "id" : "folio_stripes-core-11.2.1099000000001982",
     "name" : "folio_stripes-core",
     "version" : "11.2.1099000000001982"
+  }, {
+    "id" : "folio_notes-12.0.1099000000000187",
+    "name" : "folio_notes",
+    "version" : "12.0.1099000000000187"
   }, {
     "id" : "folio_stripes-smart-components-10.1.1099000000000783",
     "name" : "folio_stripes-smart-components",
@@ -2625,7 +2625,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2140",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2144",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2768,7 +2768,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2140",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2144",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
