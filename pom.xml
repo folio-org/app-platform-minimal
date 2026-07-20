@@ -31,12 +31,21 @@
         </executions>
         <configuration>
           <templatePath>${templatePath}</templatePath>
+          <validateArtifacts>true</validateArtifacts>
+          <validateFallbackArtifacts>false</validateFallbackArtifacts>
           <moduleRegistries>
             <registry>
               <type>okapi</type>
               <url>https://folio-registry.dev.folio.org</url>
             </registry>
           </moduleRegistries>
+          <fallbackModuleRegistries>
+            <registry>
+              <type>s3</type>
+              <bucket>eureka-application-registry</bucket>
+              <path>descriptors</path>
+            </registry>
+          </fallbackModuleRegistries>
         </configuration>
       </plugin>
     </plugins>
