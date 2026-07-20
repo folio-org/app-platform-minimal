@@ -57,7 +57,7 @@
     },
     {
       "name": "mod-scheduler",
-        "version": "latest",
+        "version": "4.1.0-SNAPSHOT.1b48fe1",
         "preRelease": "only"
     },
     {
