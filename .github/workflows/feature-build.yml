@@ -1,0 +1,57 @@
+name: Feature Build
+
+run-name: >-
+  ${{ inputs.dry_run == true && '[DRY RUN] ' || '' }}Feature build ${{ github.event.repository.name }} (${{ inputs.branch }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Feature branch to build the descriptor from'
+        required: true
+        type: string
+      skip_interface_validation:
+        description: 'Skip module interface integrity validation'
+        required: false
+        type: boolean
+        default: false
+      skip_dependency_validation:
+        description: 'Dependency validation: false = run and block, true = skip, bypass = run but warn only'
+        required: false
+        type: choice
+        default: 'false'
+        options:
+          - 'false'
+          - 'true'
+          - 'bypass'
+      dry_run:
+        description: 'Perform dry run without committing changes'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: feature-build-${{ github.repository }}-${{ inputs.branch }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  build:
+    name: Build Feature Descriptor
+    uses: folio-org/kitfox-github/.github/workflows/application-update-flow.yml@master
+    with:
+      app_name: ${{ github.event.repository.name }}
+      repo: ${{ github.repository }}
+      branch: ${{ inputs.branch }}
+      need_pr: false
+      publish: false
+      rely_on_FAR: true
+      workflow_run_number: ${{ github.run_number }}
+      skip_interface_validation: ${{ inputs.skip_interface_validation }}
+      skip_dependency_validation: ${{ inputs.skip_dependency_validation }}
+      dry_run: ${{ inputs.dry_run }}
+    secrets: inherit
