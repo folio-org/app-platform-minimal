@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010749",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010774",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010749",
+  "version" : "2.2.0-SNAPSHOT.100200000010774",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2213",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2228",
     "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2213"
+    "version" : "4.1.0-SNAPSHOT.2228"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
     "name" : "mod-configuration",
@@ -2813,7 +2813,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2213",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2228",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2879,7 +2879,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2213",
+      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2228",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
