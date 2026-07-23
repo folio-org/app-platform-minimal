@@ -10,6 +10,11 @@ on:
         description: 'Feature branch to build the descriptor from'
         required: true
         type: string
+      commit_hash:
+        description: 'Commit hash to use as the descriptor build suffix (leave empty to auto-detect from the branch HEAD)'
+        required: false
+        type: string
+        default: ''
       skip_interface_validation:
         description: 'Skip module interface integrity validation'
         required: false
@@ -40,9 +45,33 @@ permissions:
   issues: write
 
 jobs:
+  resolve-build-number:
+    name: Resolve Build Number
+    runs-on: ubuntu-latest
+    outputs:
+      build_number: ${{ steps.resolve.outputs.build_number }}
+    steps:
+      - name: Resolve build number
+        id: resolve
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ inputs.branch }}
+          COMMIT_HASH: ${{ inputs.commit_hash }}
+        run: |
+          set -eo pipefail
+          if [[ -n "$COMMIT_HASH" ]]; then
+            build_number="$COMMIT_HASH"
+          else
+            build_number=$(gh api "repos/$REPO/commits/$BRANCH" --jq '.sha[0:7]')
+          fi
+          echo "::notice::Feature build number (suffix): $build_number"
+          echo "build_number=$build_number" >> "$GITHUB_OUTPUT"
+
   build:
     name: Build Feature Descriptor
-    uses: folio-org/kitfox-github/.github/workflows/application-update-flow.yml@master
+    needs: resolve-build-number
+    uses: folio-org/kitfox-github/.github/workflows/application-update.yml@master
     with:
       app_name: ${{ github.event.repository.name }}
       repo: ${{ github.repository }}
@@ -50,6 +79,7 @@ jobs:
       need_pr: false
       publish: false
       rely_on_FAR: true
+      build_number: ${{ needs.resolve-build-number.outputs.build_number }}
       workflow_run_number: ${{ github.run_number }}
       skip_interface_validation: ${{ inputs.skip_interface_validation }}
       skip_dependency_validation: ${{ inputs.skip_dependency_validation }}
