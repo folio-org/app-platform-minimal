@@ -2,7 +2,7 @@
 
 **Workflow**: `feature-build.yml` (per app repo, from `folio-app-template`)
 **Purpose**: Build an application descriptor from a feature branch that includes custom modules built outside the standard registries, without publishing to FAR
-**Type**: `workflow_dispatch` wrapper around `application-update-flow.yml`
+**Type**: `workflow_dispatch` wrapper around `application-update.yml`
 
 ## Overview
 
@@ -15,7 +15,9 @@ Docker Hub. It:
 - skips artifact validation for **only** the fallback-resolved modules (primary modules are still
   validated against Docker Hub / npm as usual),
 - does **not** publish the descriptor to FAR,
-- commits `application.lock.json` back to the feature branch.
+- commits `application.lock.json` back to the feature branch,
+- versions the app with the feature branch's **commit hash** (`X.Y.Z-SNAPSHOT.<shortSha>`) instead
+  of a build number, so a feature app is distinguishable from a snapshot app in FAR.
 
 All build configuration lives in the feature branch's `pom.xml`. The workflow itself takes no
 registry parameters — it only names the branch and the validation switches.
@@ -89,16 +91,24 @@ gh workflow run feature-build.yml --repo folio-org/app-<name> \
 | Input                        | Description                                                    | Required | Type    | Default   |
 |------------------------------|----------------------------------------------------------------|----------|---------|-----------|
 | `branch`                     | Feature branch to build the descriptor from                    | Yes      | string  | -         |
+| `commit_hash`                | Commit hash used as the descriptor build suffix (empty = auto-detect from the branch HEAD) | No | string | `''` |
 | `skip_interface_validation`  | Skip module interface integrity validation                     | No       | boolean | `false`   |
 | `skip_dependency_validation` | Dependency validation: `false` / `true` / `bypass`             | No       | choice  | `false`   |
 | `dry_run`                    | Build without committing the lock file to the branch           | No       | boolean | `false`   |
 
-The wrapper calls `application-update-flow.yml` with fixed values that make a feature build correct:
+A `resolve-build-number` job runs first: it uses `commit_hash` when supplied, otherwise reads the
+branch HEAD short SHA (`gh api repos/<repo>/commits/<branch> --jq '.sha[0:7]'`). The resolved value
+is passed as `build_number` and becomes the version suffix (`X.Y.Z-SNAPSHOT.<shortSha>`).
+
+The wrapper calls `application-update.yml` with fixed values that make a feature build correct:
 `need_pr: false` (commit straight to the feature branch), `publish: false` (never reaches FAR), and
 `rely_on_FAR: true` (a feature branch has no matching branch in `platform-lsp`, so dependency
-validation resolves against FAR instead of a platform descriptor).
+validation resolves against FAR instead of a platform descriptor). Routing through the orchestrator
+(`application-update.yml`) rather than the flow directly also produces the run summary and the Slack
+notification.
 
 ## Related documentation
 
 - [All repository workflows](workflows.md) — overview of the four workflows this repo ships
-- [Application Update Flow](https://github.com/folio-org/kitfox-github/blob/master/.github/docs/application-update-flow.md) — the reusable workflow this wraps
+- [Application Update](https://github.com/folio-org/kitfox-github/blob/master/.github/docs/application-update.md) — the orchestrator this wraps (adds the summary + notification)
+- [Application Update Flow](https://github.com/folio-org/kitfox-github/blob/master/.github/docs/application-update-flow.md) — the underlying flow the orchestrator runs

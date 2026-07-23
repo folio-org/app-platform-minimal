@@ -8,7 +8,7 @@ holds only the trigger and the app-specific inputs, while the reusable workflow 
 | Workflow | Trigger | Calls (kitfox-github) | Purpose |
 |---|---|---|---|
 | [Application Update Scheduler](#application-update-scheduler) | schedule + manual | `application-update.yml` | Keep module versions current on configured branches |
-| [Feature Build](#feature-build) | manual | `application-update-flow.yml` | Build a descriptor from a feature branch with custom modules |
+| [Feature Build](#feature-build) | manual | `application-update.yml` | Build a descriptor from a feature branch with custom modules |
 | [Release Application Version](#release-application-version) | manual | `release-application-version-flow.yml` | Create a GitHub Release (tag + descriptor asset) |
 | [Release Preparation](#release-preparation) | manual | `release-preparation.yml` | Cut a new release branch from a previous one |
 
@@ -50,15 +50,18 @@ branch's `pom.xml`; this workflow only names the branch and the validation switc
 | Dispatch input | Description | Default |
 |---|---|---|
 | `branch` | Feature branch to build from (**required**) | - |
+| `commit_hash` | Commit hash used as the version suffix (empty = auto-detect from branch HEAD) | `''` |
 | `skip_interface_validation` | Skip module interface integrity validation | `false` |
 | `skip_dependency_validation` | `false` / `true` / `bypass` | `false` |
 | `dry_run` | Build without committing the lock file | `false` |
 
 The wrapper fixes `need_pr: false`, `publish: false`, and `rely_on_FAR: true` — the combination that
-makes a feature build correct (see the flow doc for why).
+makes a feature build correct (see the flow doc for why) — and versions the app with the feature
+branch's commit hash (`X.Y.Z-SNAPSHOT.<shortSha>`). It routes through the orchestrator
+`application-update.yml`, so the run also gets a summary and a Slack notification.
 
 - Full pom pattern + details: [Feature Build](feature-build.md)
-- What it runs: [Application Update Flow](https://github.com/folio-org/kitfox-github/blob/master/.github/docs/application-update-flow.md)
+- What it runs: [Application Update](https://github.com/folio-org/kitfox-github/blob/master/.github/docs/application-update.md)
 
 ## Release Application Version
 
