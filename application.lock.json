@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010777",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010784",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010777",
+  "version" : "2.2.0-SNAPSHOT.100200000010784",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2069",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2069"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2167",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2167"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
     "name" : "mod-configuration",
@@ -44,10 +44,6 @@
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2452"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2144",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2144"
-  }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2228",
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2228"
@@ -59,6 +55,10 @@
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2092",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2092"
+  }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2069",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2069"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
@@ -2625,7 +2625,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2144",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2167",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2768,7 +2768,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2144",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2167",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2800,6 +2800,39 @@
       }, {
         "name" : "NOTES_TYPES_DEFAULTS_LIMIT",
         "value" : "25"
+      }, {
+        "name" : "KAFKA_HOST",
+        "value" : "kafka"
+      }, {
+        "name" : "KAFKA_PORT",
+        "value" : "9092"
+      }, {
+        "name" : "KAFKA_SECURITY_PROTOCOL",
+        "value" : "PLAINTEXT",
+        "description" : "Kafka security protocol used to communicate with brokers (SSL or PLAINTEXT)"
+      }, {
+        "name" : "KAFKA_SSL_KEYSTORE_LOCATION",
+        "description" : "The location of the Kafka key store file. This is optional for client and can be used for two-way authentication for client."
+      }, {
+        "name" : "KAFKA_SSL_KEYSTORE_PASSWORD",
+        "description" : "The store password for the Kafka key store file. This is optional for client and only needed if 'ssl.keystore.location' is configured."
+      }, {
+        "name" : "KAFKA_SSL_TRUSTSTORE_LOCATION",
+        "description" : "The location of the Kafka trust store file."
+      }, {
+        "name" : "KAFKA_SSL_TRUSTSTORE_PASSWORD",
+        "description" : "The password for the Kafka trust store file. If a password is not set, trust store file configured will still be used, but integrity checking is disabled."
+      }, {
+        "name" : "KAFKA_NOTE_TOPIC_PARTITIONS",
+        "value" : "1",
+        "description" : "Number of partitions for the `notes.note` topic."
+      }, {
+        "name" : "KAFKA_NOTE_TOPIC_REPLICATION_FACTOR",
+        "description" : "Replication factor for the `notes.note` topic. When not set, the broker default is used."
+      }, {
+        "name" : "ENV",
+        "value" : "folio",
+        "description" : "The logical name of the deployment, must be unique across all environments using the same shared Kafka/Elasticsearch clusters, `a-z (any case)`, `0-9`, `-`, `_` symbols only allowed"
       } ],
       "dockerArgs" : {
         "HostConfig" : {
