@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010844",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010854",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010844",
+  "version" : "2.2.0-SNAPSHOT.100200000010854",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2179",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2182",
     "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2179"
+    "version" : "8.1.0-SNAPSHOT.2182"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
     "name" : "mod-configuration",
@@ -2625,7 +2625,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2179",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2182",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2768,7 +2768,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2179",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2182",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
