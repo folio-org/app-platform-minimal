@@ -1,16 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010867",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010881",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010867",
+  "version" : "2.2.0-SNAPSHOT.100200000010881",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2188",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2188"
-  }, {
-    "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
+    "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
-    "version" : "5.14.0-SNAPSHOT.2019"
+    "version" : "5.14.0-SNAPSHOT.2023"
   }, {
     "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
     "name" : "mod-permissions",
@@ -43,6 +39,10 @@
     "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2473",
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2473"
+  }, {
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2188",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2188"
   }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2247",
     "name" : "mod-scheduler",
@@ -95,7 +95,7 @@
   } ],
   "dependencies" : [ ],
   "moduleDescriptors" : [ {
-    "id" : "mod-configuration-5.14.0-SNAPSHOT.2019",
+    "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "Configuration",
     "provides" : [ {
       "id" : "configuration",
@@ -168,7 +168,7 @@
       "subPermissions" : [ "configuration.entries.collection.get", "configuration.entries.item.get", "configuration.entries.item.post", "configuration.entries.item.put", "configuration.entries.item.delete", "configuration.audit.collection.get" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-configuration:5.14.0-SNAPSHOT.2019",
+      "dockerImage" : "folioci/mod-configuration:5.14.0-SNAPSHOT.2023",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
