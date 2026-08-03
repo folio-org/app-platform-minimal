@@ -1,24 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010935",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010937",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010935",
+  "version" : "2.2.0-SNAPSHOT.100200000010937",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2152",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2152"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2191",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2191"
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2212",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2212"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2250",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2250"
-  }, {
-    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
-    "name" : "mod-okapi-facade",
-    "version" : "4.1.0-SNAPSHOT.2105"
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2075"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -44,27 +36,39 @@
     "name" : "mod-password-validator",
     "version" : "4.1.0-SNAPSHOT.2104"
   }, {
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2152",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2152"
+  }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2212",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2212"
+  }, {
     "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2473",
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2473"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2188",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2188"
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2250",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2250"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2428",
     "name" : "mod-settings",
     "version" : "1.4.0-SNAPSHOT.2428"
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2072",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2072"
+    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
+    "name" : "mod-okapi-facade",
+    "version" : "4.1.0-SNAPSHOT.2105"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-core-11.2.1099000000001995",
+    "name" : "folio_stripes-core",
+    "version" : "11.2.1099000000001995"
+  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -72,10 +76,6 @@
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
     "version" : "10.0.1099000000000115"
-  }, {
-    "id" : "folio_stripes-core-11.2.1099000000001992",
-    "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000001992"
   }, {
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
@@ -2625,7 +2625,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2188",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2191",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2768,7 +2768,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2188",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2191",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -3710,7 +3710,7 @@
       }
     }
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2072",
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
     "name" : "Locations Module",
     "requires" : [ ],
     "provides" : [ {
@@ -4055,7 +4055,7 @@
       "subPermissions" : [ "location-storage.migration.institutions.collection.post", "location-storage.migration.campuses.collection.post", "location-storage.migration.libraries.collection.post", "location-storage.migration.locations.collection.post", "location-storage.migration.service-points.collection.post", "location-storage.migration.service-points-users.collection.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2072",
+      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2075",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -4365,7 +4365,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-core-11.2.1099000000001992",
+    "id" : "folio_stripes-core-11.2.1099000000001995",
     "name" : "The starting point for Stripes applications",
     "requires" : [ {
       "id" : "users-bl",
