@@ -1,17 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010937",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010948",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010937",
+  "version" : "2.2.0-SNAPSHOT.100200000010948",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2191",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2191"
-  }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2075"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
@@ -48,6 +40,10 @@
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2473"
   }, {
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2191",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2191"
+  }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2250",
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2250"
@@ -60,14 +56,18 @@
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2105"
   }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2075"
+  }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-core-11.2.1099000000001995",
-    "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000001995"
+    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000804"
   }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
@@ -77,13 +77,13 @@
     "name" : "folio_tags",
     "version" : "10.0.1099000000000115"
   }, {
+    "id" : "folio_stripes-core-11.2.1099000000001995",
+    "name" : "folio_stripes-core",
+    "version" : "11.2.1099000000001995"
+  }, {
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
-  }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000799",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000799"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -4500,7 +4500,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000799",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
     "name" : "Connected Stripes components",
     "requires" : [ {
       "id" : "notes",
