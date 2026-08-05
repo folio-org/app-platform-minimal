@@ -1,9 +1,13 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010948",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010960",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010948",
+  "version" : "2.2.0-SNAPSHOT.100200000010960",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2083",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2083"
+  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
@@ -15,10 +19,6 @@
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
     "name" : "mod-tags",
     "version" : "3.1.0-SNAPSHOT.2095"
-  }, {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2069",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2069"
   }, {
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
     "name" : "mod-users-bl",
@@ -65,10 +65,6 @@
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000804"
-  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000804"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -524,11 +524,11 @@
       }
     }
   }, {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2069",
+    "id" : "mod-users-19.7.0-SNAPSHOT.2083",
     "name" : "users",
     "provides" : [ {
       "id" : "users",
-      "version" : "16.4",
+      "version" : "16.5",
       "handlers" : [ {
         "methods" : [ "GET" ],
         "pathPattern" : "/users",
@@ -1069,7 +1069,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users:19.7.0-SNAPSHOT.2069",
+      "dockerImage" : "folioci/mod-users:19.7.0-SNAPSHOT.2083",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
