@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010960",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010970",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010960",
+  "version" : "2.2.0-SNAPSHOT.100200000010970",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2083",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2083"
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2441",
+    "name" : "mod-settings",
+    "version" : "1.4.0-SNAPSHOT.2441"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -19,6 +19,10 @@
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
     "name" : "mod-tags",
     "version" : "3.1.0-SNAPSHOT.2095"
+  }, {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2083",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2083"
   }, {
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
     "name" : "mod-users-bl",
@@ -47,10 +51,6 @@
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2250",
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2250"
-  }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2428",
-    "name" : "mod-settings",
-    "version" : "1.4.0-SNAPSHOT.2428"
   }, {
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
     "name" : "mod-okapi-facade",
@@ -2954,7 +2954,7 @@
       }
     }
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2428",
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2441",
     "name" : "settings",
     "requires" : [ {
       "id" : "authtoken",
@@ -3142,7 +3142,7 @@
       "subPermissions" : [ "mod-settings.entries.item.post", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.entries.item.put", "mod-settings.entries.item.delete", "mod-settings.entries.put" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2428",
+      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2441",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
