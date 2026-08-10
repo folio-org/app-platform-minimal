@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000010988",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011064",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000010988",
+  "version" : "2.2.0-SNAPSHOT.100200000011064",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2086",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2086"
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2078",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2078"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -19,6 +19,10 @@
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
     "name" : "mod-tags",
     "version" : "3.1.0-SNAPSHOT.2095"
+  }, {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2086",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2086"
   }, {
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
     "name" : "mod-users-bl",
@@ -55,10 +59,6 @@
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2105"
-  }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2075"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
@@ -3710,7 +3710,7 @@
       }
     }
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2075",
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2078",
     "name" : "Locations Module",
     "requires" : [ ],
     "provides" : [ {
@@ -4055,7 +4055,7 @@
       "subPermissions" : [ "location-storage.migration.institutions.collection.post", "location-storage.migration.campuses.collection.post", "location-storage.migration.libraries.collection.post", "location-storage.migration.locations.collection.post", "location-storage.migration.service-points.collection.post", "location-storage.migration.service-points-users.collection.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2075",
+      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2078",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
