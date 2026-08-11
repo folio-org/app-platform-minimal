@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011064",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011084",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011064",
+  "version" : "2.2.0-SNAPSHOT.100200000011084",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2078",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2078"
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2444",
+    "name" : "mod-settings",
+    "version" : "1.4.0-SNAPSHOT.2444"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -52,13 +52,13 @@
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2250"
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2441",
-    "name" : "mod-settings",
-    "version" : "1.4.0-SNAPSHOT.2441"
-  }, {
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2105"
+  }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2078",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2078"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
@@ -2954,7 +2954,7 @@
       }
     }
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2441",
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2444",
     "name" : "settings",
     "requires" : [ {
       "id" : "authtoken",
@@ -3142,7 +3142,7 @@
       "subPermissions" : [ "mod-settings.entries.item.post", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.entries.item.put", "mod-settings.entries.item.delete", "mod-settings.entries.put" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2441",
+      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2444",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
