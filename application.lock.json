@@ -1,7 +1,7 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011125",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011129",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011125",
+  "version" : "2.2.0-SNAPSHOT.100200000011129",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
@@ -65,9 +65,9 @@
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000815",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000822",
     "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000815"
+    "version" : "10.1.1099000000000822"
   }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
@@ -4500,7 +4500,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000815",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000822",
     "name" : "Connected Stripes components",
     "requires" : [ {
       "id" : "notes",
