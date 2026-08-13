@@ -1,13 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011121",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011125",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011121",
+  "version" : "2.2.0-SNAPSHOT.100200000011125",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2482",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2482"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
@@ -40,6 +36,10 @@
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2212"
   }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2482",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2482"
+  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2191",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2191"
@@ -65,6 +65,10 @@
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000815",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000815"
+  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -80,10 +84,6 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
-  }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000804"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -4500,7 +4500,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000804",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000815",
     "name" : "Connected Stripes components",
     "requires" : [ {
       "id" : "notes",
