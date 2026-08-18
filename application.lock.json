@@ -1,24 +1,20 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011307",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011310",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011307",
+  "version" : "2.2.0-SNAPSHOT.100200000011310",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2194",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2194"
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2493",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2493"
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2081",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2081"
+    "id" : "mod-permissions-6.8.0-SNAPSHOT.e064b28",
+    "name" : "mod-permissions",
+    "version" : "6.8.0-SNAPSHOT.e064b28"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
-  }, {
-    "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
-    "name" : "mod-permissions",
-    "version" : "6.9.0-SNAPSHOT.2011"
   }, {
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
     "name" : "mod-tags",
@@ -44,9 +40,9 @@
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2217"
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2490",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2490"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2194",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2194"
   }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2264",
     "name" : "mod-scheduler",
@@ -59,6 +55,10 @@
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2105",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2105"
+  }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2081",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2081"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
@@ -210,17 +210,16 @@
       }
     }
   }, {
-    "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
+    "id" : "mod-permissions-6.8.0-SNAPSHOT.e064b28",
     "name" : "permissions",
-    "requires" : [ ],
     "provides" : [ {
       "id" : "permissions",
       "version" : "5.8",
       "handlers" : [ {
         "methods" : [ "POST" ],
         "pathPattern" : "/perms/users*",
-        "permissionsRequired" : [ "perms.users.item.post" ],
-        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
+        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ],
+        "permissionsRequired" : [ "perms.users.item.post" ]
       }, {
         "methods" : [ "GET" ],
         "pathPattern" : "/perms/users*",
@@ -228,18 +227,18 @@
       }, {
         "methods" : [ "PUT" ],
         "pathPattern" : "/perms/users/{id}",
-        "permissionsRequired" : [ "perms.users.item.put" ],
-        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
+        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ],
+        "permissionsRequired" : [ "perms.users.item.put" ]
       }, {
         "methods" : [ "DELETE" ],
         "pathPattern" : "/perms/users/{id}",
-        "permissionsRequired" : [ "perms.users.item.id.delete" ],
-        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
+        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ],
+        "permissionsRequired" : [ "perms.users.item.id.delete" ]
       }, {
         "methods" : [ "DELETE" ],
         "pathPattern" : "/perms/users/{id}/permissions/{perm}",
-        "permissionsRequired" : [ "perms.users.item.perm.delete" ],
-        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
+        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ],
+        "permissionsRequired" : [ "perms.users.item.perm.delete" ]
       }, {
         "methods" : [ "GET" ],
         "pathPattern" : "/perms/permissions",
@@ -251,8 +250,8 @@
       }, {
         "methods" : [ "PUT" ],
         "pathPattern" : "/perms/permissions/{id}",
-        "permissionsRequired" : [ "perms.permissions.item.put" ],
-        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
+        "permissionsDesired" : [ "perms.users.assign.okapi", "perms.users.assign.immutable", "perms.users.assign.mutable" ],
+        "permissionsRequired" : [ "perms.permissions.item.put" ]
       }, {
         "methods" : [ "POST" ],
         "pathPattern" : "/perms/permissions",
@@ -286,6 +285,7 @@
         "pathPattern" : "/_/tenantpermissions"
       } ]
     } ],
+    "requires" : [ ],
     "permissionSets" : [ {
       "permissionName" : "perms.users.get",
       "displayName" : "permission users read",
@@ -354,16 +354,16 @@
       "description" : "Allow any mutable permission to be added for user"
     }, {
       "permissionName" : "perms.permissions.all",
-      "replaces" : [ "perms.permissions" ],
       "displayName" : "permissions",
       "description" : "All permissions for permission objects",
-      "subPermissions" : [ "perms.permissions.get", "perms.permissions.item.post", "perms.permissions.item.put", "perms.permissions.item.delete", "perms.permissions.purge-deprecated.post" ]
+      "subPermissions" : [ "perms.permissions.get", "perms.permissions.item.post", "perms.permissions.item.put", "perms.permissions.item.delete", "perms.permissions.purge-deprecated.post" ],
+      "replaces" : [ "perms.permissions" ]
     }, {
       "permissionName" : "perms.users.all",
-      "replaces" : [ "perms.users" ],
       "displayName" : "permission users",
       "description" : "All permissions for permission user objects",
-      "subPermissions" : [ "perms.users.get", "perms.users.item.post", "perms.users.item.put", "perms.users.item.delete" ]
+      "subPermissions" : [ "perms.users.get", "perms.users.item.post", "perms.users.item.put", "perms.users.item.delete" ],
+      "replaces" : [ "perms.users" ]
     }, {
       "permissionName" : "perms.all",
       "displayName" : "perms all",
@@ -371,8 +371,18 @@
       "subPermissions" : [ "perms.users.all", "perms.permissions.all", "perms.users.assign.immutable", "perms.users.assign.mutable" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-permissions:6.9.0-SNAPSHOT.2011",
-      "dockerPull" : true,
+      "dockerImage" : "mod-permissions:6.8.0-SNAPSHOT.e064b28",
+      "dockerPull" : false,
+      "dockerArgs" : {
+        "HostConfig" : {
+          "Memory" : 715827883,
+          "PortBindings" : {
+            "8081/tcp" : [ {
+              "HostPort" : "%p"
+            } ]
+          }
+        }
+      },
       "env" : [ {
         "name" : "JAVA_OPTIONS",
         "value" : "-XX:MaxRAMPercentage=66.0"
@@ -400,17 +410,7 @@
       }, {
         "name" : "DB_MAXPOOLSIZE",
         "value" : "5"
-      } ],
-      "dockerArgs" : {
-        "HostConfig" : {
-          "Memory" : 715827883,
-          "PortBindings" : {
-            "8081/tcp" : [ {
-              "HostPort" : "%p"
-            } ]
-          }
-        }
-      }
+      } ]
     }
   }, {
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
@@ -2068,7 +2068,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2490",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2493",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2281,11 +2281,15 @@
       } ]
     }, {
       "id" : "user-capability-sets",
-      "version" : "1.0",
+      "version" : "1.1",
       "handlers" : [ {
         "methods" : [ "POST" ],
         "pathPattern" : "/users/capability-sets",
         "permissionsRequired" : [ "user-capability-sets.collection.post" ]
+      }, {
+        "methods" : [ "POST" ],
+        "pathPattern" : "/users/capability-sets/query",
+        "permissionsRequired" : [ "user-capability-sets.query.post" ]
       }, {
         "methods" : [ "GET" ],
         "pathPattern" : "/users/capability-sets",
@@ -2550,10 +2554,14 @@
       "displayName" : "User-Capability-Sets - Get capability-sets assigned to user",
       "description" : "Retrieve capability-sets assigned to user"
     }, {
+      "permissionName" : "user-capability-sets.query.post",
+      "displayName" : "User-Capability-Sets - Query effective capability-sets for users",
+      "description" : "Query effective capability-set names assigned directly or through roles for users"
+    }, {
       "permissionName" : "user-capability-sets.all",
       "displayName" : "User-Capability Sets - all permissions",
       "description" : "All permissions for user-capability set management",
-      "subPermissions" : [ "user-capability-sets.collection.put", "user-capability-sets.collection.post", "user-capability-sets.collection.delete", "user-capability-sets.collection.get" ]
+      "subPermissions" : [ "user-capability-sets.collection.put", "user-capability-sets.collection.post", "user-capability-sets.collection.delete", "user-capability-sets.collection.get", "user-capability-sets.query.post" ]
     }, {
       "permissionName" : "permissions.users.item.get",
       "displayName" : "Permissions - get user permissions",
@@ -2574,7 +2582,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2490",
+      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2493",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
