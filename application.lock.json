@@ -1,9 +1,13 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011660",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011674",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011660",
+  "version" : "2.2.0-SNAPSHOT.100200000011674",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2090",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2090"
+  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
@@ -56,19 +60,11 @@
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2117"
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2087",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2087"
-  }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2031",
     "name" : "edge-users",
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000861",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000861"
-  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000861",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000861"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -3718,7 +3718,7 @@
       }
     }
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2087",
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2090",
     "name" : "Locations Module",
     "requires" : [ ],
     "provides" : [ {
@@ -4063,7 +4063,7 @@
       "subPermissions" : [ "location-storage.migration.institutions.collection.post", "location-storage.migration.campuses.collection.post", "location-storage.migration.libraries.collection.post", "location-storage.migration.locations.collection.post", "location-storage.migration.service-points.collection.post", "location-storage.migration.service-points-users.collection.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2087",
+      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2090",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
