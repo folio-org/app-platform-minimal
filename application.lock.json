@@ -1,28 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011681",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011682",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011681",
+  "version" : "2.2.0-SNAPSHOT.100200000011682",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2169",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2169"
-  }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2244",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2244"
-  }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2508",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2508"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2296",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2296"
-  }, {
-    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2125",
-    "name" : "mod-okapi-facade",
-    "version" : "4.1.0-SNAPSHOT.2125"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2209",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2209"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -48,13 +32,29 @@
     "name" : "mod-password-validator",
     "version" : "4.1.0-SNAPSHOT.2104"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2203",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2203"
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2169",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2169"
+  }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2244",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2244"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2508",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2508"
+  }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2296",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2296"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
     "name" : "mod-settings",
     "version" : "1.4.0-SNAPSHOT.2465"
+  }, {
+    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2125",
+    "name" : "mod-okapi-facade",
+    "version" : "4.1.0-SNAPSHOT.2125"
   }, {
     "id" : "mod-locations-1.0.0-SNAPSHOT.2090",
     "name" : "mod-locations",
@@ -2633,7 +2633,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2203",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2209",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2776,7 +2776,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2203",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2209",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
