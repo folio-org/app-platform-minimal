@@ -1,12 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011695",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011702",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011695",
+  "version" : "2.2.0-SNAPSHOT.100200000011702",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2262",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2270",
     "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2262"
+    "version" : "4.1.0-SNAPSHOT.2270"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2515",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2515"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -36,10 +40,6 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2169"
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2508",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2508"
-  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2209",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2209"
@@ -65,6 +65,10 @@
     "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000868",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000868"
+  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -80,10 +84,6 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
-  }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000861",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000861"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -1802,7 +1802,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2262",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2270",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -1873,7 +1873,7 @@
       }, {
         "methods" : [ "GET" ],
         "pathPattern" : "/users-keycloak/_self",
-        "permissionsRequired" : [ ]
+        "permissionsRequired" : [ "*" ]
       }, {
         "methods" : [ "POST" ],
         "pathPattern" : "/users-keycloak/migrations",
@@ -2050,7 +2050,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.collection.get", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2262",
+      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2270",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2068,7 +2068,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2508",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2515",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2582,7 +2582,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2508",
+      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2515",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -4508,7 +4508,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000861",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000868",
     "name" : "Connected Stripes components",
     "requires" : [ {
       "id" : "notes",
