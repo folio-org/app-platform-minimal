@@ -1,16 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011702",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011703",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011702",
+  "version" : "2.2.0-SNAPSHOT.100200000011703",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2270",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2270"
-  }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2515",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2515"
+    "id" : "edge-users-2.3.0-SNAPSHOT.2083",
+    "name" : "edge-users",
+    "version" : "2.3.0-SNAPSHOT.2083"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -40,6 +36,14 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2169"
   }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2270",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2270"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2515",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2515"
+  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2209",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2209"
@@ -59,16 +63,8 @@
     "id" : "mod-locations-1.0.0-SNAPSHOT.2090",
     "name" : "mod-locations",
     "version" : "1.0.0-SNAPSHOT.2090"
-  }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2031",
-    "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2031"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000868",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000868"
-  }, {
     "id" : "folio_developer-11.0.1099000000000395",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000395"
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000868",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000868"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -3691,16 +3691,101 @@
       }
     }
   }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2031",
+    "id" : "edge-users-2.3.0-SNAPSHOT.2083",
     "name" : "Retrieve and create users information Edge API",
     "requires" : [ {
       "id" : "users",
       "version" : "16.4"
+    }, {
+      "id" : "patron-pin",
+      "version" : "1.0"
+    }, {
+      "id" : "feesfines",
+      "version" : "19.1"
+    }, {
+      "id" : "automated-patron-blocks",
+      "version" : "0.1"
     } ],
     "provides" : [ ],
     "permissionSets" : [ ],
+    "env" : [ {
+      "name" : "JAVA_OPTIONS",
+      "value" : "-XX:MaxRAMPercentage=66.0",
+      "description" : "Java runtime options for the module container.",
+      "required" : false
+    }, {
+      "name" : "SERVER_PORT",
+      "value" : "8080",
+      "description" : "HTTP port used by the embedded Spring Boot server.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_ENVIRONMENT",
+      "value" : "dev",
+      "description" : "FOLIO environment name used by folio-spring-system-user configuration.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_CLIENT_OKAPIURL",
+      "value" : "https://localhost:9130",
+      "description" : "Okapi base URL used for outbound FOLIO service calls. This must be set to the reachable Okapi URL for the deployment environment.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_CLIENT_TLS_ENABLED",
+      "value" : "false",
+      "description" : "Enables custom TLS truststore configuration for outbound Okapi/client calls.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_CLIENT_TLS_TRUSTSTOREPATH",
+      "value" : "",
+      "description" : "Path to the outbound client TLS truststore. Required only when FOLIO_CLIENT_TLS_ENABLED is true and the server certificate is not trusted by the default JVM truststore.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_CLIENT_TLS_TRUSTSTOREPASSWORD",
+      "value" : "",
+      "description" : "Password for the outbound client TLS truststore.",
+      "required" : false
+    }, {
+      "name" : "FOLIO_CLIENT_TLS_TRUSTSTORETYPE",
+      "value" : "",
+      "description" : "Type of the outbound client TLS truststore, for example JKS, PKCS12, or BCFKS. If unset, the JVM default truststore type is used.",
+      "required" : false
+    }, {
+      "name" : "SECURE_STORE_PROPS",
+      "value" : "src/main/resources/ephemeral.properties",
+      "description" : "Path or URL to the edge secure-store properties file used to configure the secure store for institutional user credentials. In the FOLIO container image this relative default resolves from /usr/verticles, so operators using the default must mount the file at /usr/verticles/src/main/resources/ephemeral.properties, or set SECURE_STORE_PROPS to another absolute path or URL.",
+      "required" : false
+    }, {
+      "name" : "API_KEY_SOURCES",
+      "value" : "PARAM,HEADER,PATH",
+      "description" : "Comma-separated list of locations where the edge API key is accepted. Valid values are PARAM, HEADER, and PATH.",
+      "required" : false
+    }, {
+      "name" : "TOKEN_CACHE_TTL_MS",
+      "value" : "3600000",
+      "description" : "Time to live, in milliseconds, for successful Okapi token cache entries.",
+      "required" : false
+    }, {
+      "name" : "NULL_TOKEN_CACHE_TTL_MS",
+      "value" : "30000",
+      "description" : "Time to live, in milliseconds, for failed or null Okapi token cache entries.",
+      "required" : false
+    }, {
+      "name" : "TOKEN_CACHE_CAPACITY",
+      "value" : "100",
+      "description" : "Maximum number of Okapi token entries held by the in-memory edge token cache.",
+      "required" : false
+    }, {
+      "name" : "EDGE_SECURITY_FILTER_ENABLED",
+      "value" : "true",
+      "description" : "Enables the edge API key security filter.",
+      "required" : false
+    }, {
+      "name" : "HEADER_EDGE_VALIDATION_EXCLUDE",
+      "value" : "/admin/health,/admin/info,/swagger-resources,/v2/api-docs,/swagger-ui,/_/tenant",
+      "description" : "Comma-separated list of request path prefixes excluded from edge API key validation.",
+      "required" : false
+    } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2031",
+      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2083",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
