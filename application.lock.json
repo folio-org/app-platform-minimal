@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011703",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011710",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011703",
+  "version" : "2.2.0-SNAPSHOT.100200000011710",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2083",
+    "id" : "edge-users-2.3.0-SNAPSHOT.2086",
     "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2083"
+    "version" : "2.3.0-SNAPSHOT.2086"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -3691,7 +3691,7 @@
       }
     }
   }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2083",
+    "id" : "edge-users-2.3.0-SNAPSHOT.2086",
     "name" : "Retrieve and create users information Edge API",
     "requires" : [ {
       "id" : "users",
@@ -3699,14 +3699,15 @@
     }, {
       "id" : "patron-pin",
       "version" : "1.0"
-    }, {
+    } ],
+    "provides" : [ ],
+    "optional" : [ {
       "id" : "feesfines",
       "version" : "19.1"
     }, {
       "id" : "automated-patron-blocks",
       "version" : "0.1"
     } ],
-    "provides" : [ ],
     "permissionSets" : [ ],
     "env" : [ {
       "name" : "JAVA_OPTIONS",
@@ -3785,7 +3786,7 @@
       "required" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2083",
+      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2086",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
