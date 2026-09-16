@@ -1,13 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011732",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011745",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011732",
+  "version" : "2.2.0-SNAPSHOT.100200000011745",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
-    "name" : "mod-password-validator",
-    "version" : "4.1.0-SNAPSHOT.2118"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2023"
@@ -27,6 +23,10 @@
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
     "name" : "mod-users-bl",
     "version" : "8.1.0-SNAPSHOT.2010"
+  }, {
+    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
+    "name" : "mod-password-validator",
+    "version" : "4.1.0-SNAPSHOT.2118"
   }, {
     "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2169",
     "name" : "mod-login-keycloak",
@@ -65,13 +65,9 @@
     "version" : "2.3.0-SNAPSHOT.2086"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000874",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000874"
-  }, {
-    "id" : "folio_developer-11.0.1099000000000408",
+    "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
-    "version" : "11.0.1099000000000408"
+    "version" : "11.0.1099000000000419"
   }, {
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000874",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000874"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000154",
     "name" : "folio_authorization-policies",
@@ -4225,7 +4225,7 @@
     }
   } ],
   "uiModuleDescriptors" : [ {
-    "id" : "folio_developer-11.0.1099000000000408",
+    "id" : "folio_developer-11.0.1099000000000419",
     "name" : "Developer settings",
     "requires" : [ {
       "id" : "settings",
@@ -4285,6 +4285,11 @@
       "permissionName" : "ui-developer.settings.okapiQuery.view",
       "replaces" : [ "ui-developer.settings.okapiQuery" ],
       "displayName" : "Settings (developer): Can run queries",
+      "subPermissions" : [ "settings.developer.enabled" ],
+      "visible" : true
+    }, {
+      "permissionName" : "ui-developer.settings.apiConsole.execute",
+      "displayName" : "Settings (developer): Can use the API console",
       "subPermissions" : [ "settings.developer.enabled" ],
       "visible" : true
     }, {
