@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011748",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011749",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011748",
+  "version" : "2.2.0-SNAPSHOT.100200000011749",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2528",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2528"
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2176",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2176"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -32,13 +32,13 @@
     "name" : "mod-password-validator",
     "version" : "4.1.0-SNAPSHOT.2118"
   }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2169",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2169"
-  }, {
     "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2276",
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2276"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2528",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2528"
   }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2209",
     "name" : "mod-notes",
@@ -1485,7 +1485,7 @@
       }
     }
   }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2169",
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2176",
     "name" : "keycloak-login",
     "requires" : [ {
       "id" : "users",
@@ -1534,7 +1534,7 @@
       }, {
         "methods" : [ "POST" ],
         "pathPattern" : "/authn/logout-all",
-        "permissionsRequired" : [ ]
+        "permissionsRequired" : [ "*" ]
       }, {
         "methods" : [ "POST" ],
         "pathPattern" : "/authn/refresh",
@@ -1711,7 +1711,7 @@
       "subPermissions" : [ "auth.token.post", "auth.token.sign.post", "auth.refreshtoken.post", "auth.token.refresh.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2169",
+      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2176",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
