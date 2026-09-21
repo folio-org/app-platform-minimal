@@ -1,16 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011776",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011777",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011776",
+  "version" : "2.2.0-SNAPSHOT.100200000011777",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2212",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2212"
-  }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2093",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2093"
+    "id" : "edge-users-2.3.0-SNAPSHOT.2092",
+    "name" : "edge-users",
+    "version" : "2.3.0-SNAPSHOT.2092"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -48,6 +44,10 @@
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2528"
   }, {
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2212",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2212"
+  }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2318",
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2318"
@@ -60,9 +60,9 @@
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2125"
   }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2086",
-    "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2086"
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2093",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2093"
   } ],
   "uiModules" : [ {
     "id" : "folio_developer-11.0.1099000000000419",
@@ -3682,7 +3682,7 @@
       }
     }
   }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2086",
+    "id" : "edge-users-2.3.0-SNAPSHOT.2092",
     "name" : "Retrieve and create users information Edge API",
     "requires" : [ {
       "id" : "users",
@@ -3777,7 +3777,7 @@
       "required" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2086",
+      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2092",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
