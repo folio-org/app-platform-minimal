@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011781",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011783",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011781",
+  "version" : "2.2.0-SNAPSHOT.100200000011783",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2536",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2536"
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2331",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2331"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -40,13 +40,13 @@
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2279"
   }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2536",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2536"
+  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2212",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2212"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2318",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2318"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
     "name" : "mod-settings",
@@ -65,6 +65,10 @@
     "version" : "2.3.0-SNAPSHOT.2092"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-core-11.2.1099000000002027",
+    "name" : "folio_stripes-core",
+    "version" : "11.2.1099000000002027"
+  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -72,10 +76,6 @@
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
     "version" : "10.0.1099000000000115"
-  }, {
-    "id" : "folio_stripes-core-11.2.1099000000002020",
-    "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000002020"
   }, {
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
@@ -2845,7 +2845,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2318",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2331",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2911,7 +2911,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2318",
+      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2331",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -4455,7 +4455,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-core-11.2.1099000000002020",
+    "id" : "folio_stripes-core-11.2.1099000000002027",
     "name" : "The starting point for Stripes applications",
     "requires" : [ {
       "id" : "users-bl",
