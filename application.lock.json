@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011783",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011787",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011783",
+  "version" : "2.2.0-SNAPSHOT.100200000011787",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2331",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2331"
+    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
+    "name" : "mod-users-bl",
+    "version" : "8.1.0-SNAPSHOT.2017"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -23,10 +23,6 @@
     "id" : "mod-users-19.7.0-SNAPSHOT.2129",
     "name" : "mod-users",
     "version" : "19.7.0-SNAPSHOT.2129"
-  }, {
-    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
-    "name" : "mod-users-bl",
-    "version" : "8.1.0-SNAPSHOT.2010"
   }, {
     "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
     "name" : "mod-password-validator",
@@ -48,6 +44,10 @@
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2212"
   }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2331",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2331"
+  }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
     "name" : "mod-settings",
     "version" : "1.4.0-SNAPSHOT.2465"
@@ -65,10 +65,6 @@
     "version" : "2.3.0-SNAPSHOT.2092"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-core-11.2.1099000000002027",
-    "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000002027"
-  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -76,6 +72,10 @@
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
     "version" : "10.0.1099000000000115"
+  }, {
+    "id" : "folio_stripes-core-11.2.1099000000002027",
+    "name" : "folio_stripes-core",
+    "version" : "11.2.1099000000002027"
   }, {
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
@@ -1138,7 +1138,7 @@
       }
     }
   }, {
-    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2010",
+    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
     "name" : "users business logic",
     "requires" : [ {
       "id" : "users",
@@ -1179,7 +1179,7 @@
       }, {
         "methods" : [ "GET" ],
         "pathPattern" : "/bl-users/_self",
-        "permissionsRequired" : [ ],
+        "permissionsRequired" : [ "*" ],
         "modulePermissions" : [ "users.item.get", "users.collection.get", "perms.users.get", "usergroups.item.get", "inventory-storage.service-points-users.collection.get", "inventory-storage.service-points-users.item.get", "inventory-storage.service-points.collection.get", "inventory-storage.service-points.item.get" ]
       }, {
         "methods" : [ "POST" ],
@@ -1243,7 +1243,7 @@
       }, {
         "methods" : [ "POST" ],
         "pathPattern" : "/bl-users/settings/myprofile/password",
-        "permissionsRequired" : [ ],
+        "permissionsRequired" : [ "*" ],
         "permissionsDesired" : [ ],
         "modulePermissions" : [ "validation.validate.post", "users.item.get" ]
       }, {
@@ -1351,7 +1351,7 @@
       "description" : "To write the settings in mod-settings"
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-bl:8.1.0-SNAPSHOT.2010",
+      "dockerImage" : "folioci/mod-users-bl:8.1.0-SNAPSHOT.2017",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
