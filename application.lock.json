@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011795",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011813",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011795",
+  "version" : "2.2.0-SNAPSHOT.100200000011813",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2151",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2151"
+    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2128",
+    "name" : "mod-okapi-facade",
+    "version" : "4.1.0-SNAPSHOT.2128"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
     "name" : "mod-configuration",
@@ -19,6 +19,10 @@
     "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
     "name" : "mod-tags",
     "version" : "3.1.0-SNAPSHOT.2095"
+  }, {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2151",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2151"
   }, {
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
     "name" : "mod-users-bl",
@@ -51,10 +55,6 @@
     "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
     "name" : "mod-settings",
     "version" : "1.4.0-SNAPSHOT.2465"
-  }, {
-    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2125",
-    "name" : "mod-okapi-facade",
-    "version" : "4.1.0-SNAPSHOT.2125"
   }, {
     "id" : "mod-locations-1.0.0-SNAPSHOT.2093",
     "name" : "mod-locations",
@@ -3180,7 +3180,7 @@
       }
     }
   }, {
-    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2125",
+    "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2128",
     "name" : "Okapi facade",
     "requires" : [ ],
     "provides" : [ {
@@ -3643,7 +3643,7 @@
       "subPermissions" : [ "okapi.deploy", "okapi.modules", "okapi.tenants", "okapi.tenantmodules", "okapi.timers", "okapi.interfaces", "okapi.version.get", "okapi.env" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-okapi-facade:4.1.0-SNAPSHOT.2125",
+      "dockerImage" : "folioci/mod-okapi-facade:4.1.0-SNAPSHOT.2128",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
