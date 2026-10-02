@@ -1,16 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011836",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011837",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011836",
+  "version" : "2.2.0-SNAPSHOT.100200000011837",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
+    "name" : "mod-settings",
+    "version" : "1.4.0-SNAPSHOT.2496"
+  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2030"
-  }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2480",
-    "name" : "mod-settings",
-    "version" : "1.4.0-SNAPSHOT.2480"
   }, {
     "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
     "name" : "mod-permissions",
@@ -2956,7 +2956,7 @@
       }
     }
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2480",
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "settings",
     "requires" : [ {
       "id" : "authtoken",
@@ -3144,7 +3144,7 @@
       "subPermissions" : [ "mod-settings.entries.item.post", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.entries.item.put", "mod-settings.entries.item.delete", "mod-settings.entries.put" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2480",
+      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2496",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
