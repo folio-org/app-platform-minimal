@@ -1,16 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011827",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011836",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011827",
+  "version" : "2.2.0-SNAPSHOT.100200000011836",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2359",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2359"
-  }, {
-    "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
+    "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
-    "version" : "5.14.0-SNAPSHOT.2023"
+    "version" : "5.14.0-SNAPSHOT.2030"
+  }, {
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2480",
+    "name" : "mod-settings",
+    "version" : "1.4.0-SNAPSHOT.2480"
   }, {
     "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
     "name" : "mod-permissions",
@@ -48,9 +48,9 @@
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2218"
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
-    "name" : "mod-settings",
-    "version" : "1.4.0-SNAPSHOT.2465"
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2359",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2359"
   }, {
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2128",
     "name" : "mod-okapi-facade",
@@ -95,7 +95,7 @@
   } ],
   "dependencies" : [ ],
   "moduleDescriptors" : [ {
-    "id" : "mod-configuration-5.14.0-SNAPSHOT.2023",
+    "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "Configuration",
     "provides" : [ {
       "id" : "configuration",
@@ -168,7 +168,7 @@
       "subPermissions" : [ "configuration.entries.collection.get", "configuration.entries.item.get", "configuration.entries.item.post", "configuration.entries.item.put", "configuration.entries.item.delete", "configuration.audit.collection.get" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-configuration:5.14.0-SNAPSHOT.2023",
+      "dockerImage" : "folioci/mod-configuration:5.14.0-SNAPSHOT.2030",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2956,7 +2956,7 @@
       }
     }
   }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2465",
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2480",
     "name" : "settings",
     "requires" : [ {
       "id" : "authtoken",
@@ -3144,7 +3144,7 @@
       "subPermissions" : [ "mod-settings.entries.item.post", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.entries.item.put", "mod-settings.entries.item.delete", "mod-settings.entries.put" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2465",
+      "dockerImage" : "folioci/mod-settings:1.4.0-SNAPSHOT.2480",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
