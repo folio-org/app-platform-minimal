@@ -1,17 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.1.16",
+  "id" : "app-platform-minimal-2.1.17",
   "name" : "app-platform-minimal",
-  "version" : "2.1.16",
+  "version" : "2.1.17",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-19.6.2",
-    "name" : "mod-users",
-    "version" : "19.6.2"
-  }, {
-    "id" : "mod-login-keycloak-4.0.2",
-    "name" : "mod-login-keycloak",
-    "version" : "4.0.2"
-  }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
     "version" : "5.13.0"
@@ -24,6 +16,10 @@
     "name" : "mod-tags",
     "version" : "3.0.0"
   }, {
+    "id" : "mod-users-19.6.2",
+    "name" : "mod-users",
+    "version" : "19.6.2"
+  }, {
     "id" : "mod-users-bl-8.0.0",
     "name" : "mod-users-bl",
     "version" : "8.0.0"
@@ -31,6 +27,10 @@
     "id" : "mod-password-validator-4.0.0",
     "name" : "mod-password-validator",
     "version" : "4.0.0"
+  }, {
+    "id" : "mod-login-keycloak-4.0.2",
+    "name" : "mod-login-keycloak",
+    "version" : "4.0.2"
   }, {
     "id" : "mod-users-keycloak-4.0.3",
     "name" : "mod-users-keycloak",
@@ -61,6 +61,10 @@
     "version" : "2.2.1"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-core-11.1.7",
+    "name" : "folio_stripes-core",
+    "version" : "11.1.7"
+  }, {
     "id" : "folio_developer-11.0.0",
     "name" : "folio_developer",
     "version" : "11.0.0"
@@ -68,10 +72,6 @@
     "id" : "folio_tags-10.0.0",
     "name" : "folio_tags",
     "version" : "10.0.0"
-  }, {
-    "id" : "folio_stripes-core-11.1.6",
-    "name" : "folio_stripes-core",
-    "version" : "11.1.6"
   }, {
     "id" : "folio_notes-12.0.0",
     "name" : "folio_notes",
@@ -3897,7 +3897,7 @@
       "visible" : false
     } ]
   }, {
-    "id" : "folio_stripes-core-11.1.6",
+    "id" : "folio_stripes-core-11.1.7",
     "name" : "The starting point for Stripes applications",
     "requires" : [ {
       "id" : "users-bl",
