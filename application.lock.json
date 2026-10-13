@@ -1,9 +1,37 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011883",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011886",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011883",
+  "version" : "2.2.0-SNAPSHOT.100200000011886",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2170",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2170"
+  }, {
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2194",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2194"
+  }, {
+    "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
+    "name" : "mod-configuration",
+    "version" : "5.14.0-SNAPSHOT.2030"
+  }, {
+    "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
+    "name" : "mod-permissions",
+    "version" : "6.9.0-SNAPSHOT.2011"
+  }, {
+    "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
+    "name" : "mod-tags",
+    "version" : "3.1.0-SNAPSHOT.2095"
+  }, {
+    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
+    "name" : "mod-users-bl",
+    "version" : "8.1.0-SNAPSHOT.2017"
+  }, {
+    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
+    "name" : "mod-password-validator",
+    "version" : "4.1.0-SNAPSHOT.2118"
+  }, {
     "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2288",
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2288"
@@ -20,6 +48,10 @@
     "name" : "mod-scheduler",
     "version" : "4.1.0-SNAPSHOT.2404"
   }, {
+    "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
+    "name" : "mod-settings",
+    "version" : "1.4.0-SNAPSHOT.2496"
+  }, {
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2139",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2139"
@@ -27,38 +59,6 @@
     "id" : "mod-locations-1.0.0-SNAPSHOT.2099",
     "name" : "mod-locations",
     "version" : "1.0.0-SNAPSHOT.2099"
-  }, {
-    "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
-    "name" : "mod-configuration",
-    "version" : "5.14.0-SNAPSHOT.2030"
-  }, {
-    "id" : "mod-permissions-6.9.0-SNAPSHOT.2011",
-    "name" : "mod-permissions",
-    "version" : "6.9.0-SNAPSHOT.2011"
-  }, {
-    "id" : "mod-tags-3.1.0-SNAPSHOT.2095",
-    "name" : "mod-tags",
-    "version" : "3.1.0-SNAPSHOT.2095"
-  }, {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2151",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2151"
-  }, {
-    "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
-    "name" : "mod-users-bl",
-    "version" : "8.1.0-SNAPSHOT.2017"
-  }, {
-    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
-    "name" : "mod-password-validator",
-    "version" : "4.1.0-SNAPSHOT.2118"
-  }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2189",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2189"
-  }, {
-    "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
-    "name" : "mod-settings",
-    "version" : "1.4.0-SNAPSHOT.2496"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2092",
     "name" : "edge-users",
@@ -524,11 +524,11 @@
       }
     }
   }, {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2151",
+    "id" : "mod-users-19.7.0-SNAPSHOT.2170",
     "name" : "users",
     "provides" : [ {
       "id" : "users",
-      "version" : "16.5",
+      "version" : "16.6",
       "handlers" : [ {
         "methods" : [ "GET" ],
         "pathPattern" : "/users",
@@ -1072,7 +1072,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users:19.7.0-SNAPSHOT.2151",
+      "dockerImage" : "folioci/mod-users:19.7.0-SNAPSHOT.2170",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -1488,7 +1488,7 @@
       }
     }
   }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2189",
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2194",
     "name" : "keycloak-login",
     "requires" : [ {
       "id" : "users",
@@ -1714,7 +1714,7 @@
       "subPermissions" : [ "auth.token.post", "auth.token.sign.post", "auth.refreshtoken.post", "auth.token.refresh.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2189",
+      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2194",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
