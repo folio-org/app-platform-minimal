@@ -4,6 +4,10 @@
   "version" : "2.1.17",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-login-keycloak-4.0.3",
+    "name" : "mod-login-keycloak",
+    "version" : "4.0.3"
+  }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
     "version" : "5.13.0"
@@ -27,10 +31,6 @@
     "id" : "mod-password-validator-4.0.0",
     "name" : "mod-password-validator",
     "version" : "4.0.0"
-  }, {
-    "id" : "mod-login-keycloak-4.0.2",
-    "name" : "mod-login-keycloak",
-    "version" : "4.0.2"
   }, {
     "id" : "mod-users-keycloak-4.0.3",
     "name" : "mod-users-keycloak",
@@ -61,10 +61,6 @@
     "version" : "2.2.1"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-core-11.1.7",
-    "name" : "folio_stripes-core",
-    "version" : "11.1.7"
-  }, {
     "id" : "folio_developer-11.0.0",
     "name" : "folio_developer",
     "version" : "11.0.0"
@@ -72,6 +68,10 @@
     "id" : "folio_tags-10.0.0",
     "name" : "folio_tags",
     "version" : "10.0.0"
+  }, {
+    "id" : "folio_stripes-core-11.1.7",
+    "name" : "folio_stripes-core",
+    "version" : "11.1.7"
   }, {
     "id" : "folio_notes-12.0.0",
     "name" : "folio_notes",
@@ -1484,7 +1484,7 @@
       }
     }
   }, {
-    "id" : "mod-login-keycloak-4.0.2",
+    "id" : "mod-login-keycloak-4.0.3",
     "name" : "keycloak-login",
     "requires" : [ {
       "id" : "users",
@@ -1710,7 +1710,7 @@
       "subPermissions" : [ "auth.token.post", "auth.token.sign.post", "auth.refreshtoken.post", "auth.token.refresh.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-login-keycloak:4.0.2",
+      "dockerImage" : "folioorg/mod-login-keycloak:4.0.3",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
