@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.1.17",
+  "id" : "app-platform-minimal-2.1.18",
   "name" : "app-platform-minimal",
-  "version" : "2.1.17",
+  "version" : "2.1.18",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-login-keycloak-4.0.3",
-    "name" : "mod-login-keycloak",
-    "version" : "4.0.3"
+    "id" : "mod-roles-keycloak-4.0.5",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.0.5"
   }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
@@ -32,13 +32,13 @@
     "name" : "mod-password-validator",
     "version" : "4.0.0"
   }, {
+    "id" : "mod-login-keycloak-4.0.3",
+    "name" : "mod-login-keycloak",
+    "version" : "4.0.3"
+  }, {
     "id" : "mod-users-keycloak-4.0.3",
     "name" : "mod-users-keycloak",
     "version" : "4.0.3"
-  }, {
-    "id" : "mod-roles-keycloak-4.0.4",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.0.4"
   }, {
     "id" : "mod-notes-8.0.0",
     "name" : "mod-notes",
@@ -2067,7 +2067,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.0.4",
+    "id" : "mod-roles-keycloak-4.0.5",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2573,7 +2573,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-roles-keycloak:4.0.4",
+      "dockerImage" : "folioorg/mod-roles-keycloak:4.0.5",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
