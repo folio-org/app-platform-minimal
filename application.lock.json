@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.1.18",
+  "id" : "app-platform-minimal-2.1.19",
   "name" : "app-platform-minimal",
-  "version" : "2.1.18",
+  "version" : "2.1.19",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.0.5",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.0.5"
+    "id" : "mod-users-keycloak-4.0.4",
+    "name" : "mod-users-keycloak",
+    "version" : "4.0.4"
   }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
@@ -36,9 +36,9 @@
     "name" : "mod-login-keycloak",
     "version" : "4.0.3"
   }, {
-    "id" : "mod-users-keycloak-4.0.3",
-    "name" : "mod-users-keycloak",
-    "version" : "4.0.3"
+    "id" : "mod-roles-keycloak-4.0.5",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.0.5"
   }, {
     "id" : "mod-notes-8.0.0",
     "name" : "mod-notes",
@@ -1801,7 +1801,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.0.3",
+    "id" : "mod-users-keycloak-4.0.4",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2049,7 +2049,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.collection.get", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-users-keycloak:4.0.3",
+      "dockerImage" : "folioorg/mod-users-keycloak:4.0.4",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
