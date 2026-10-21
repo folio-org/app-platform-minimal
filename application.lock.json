@@ -1,16 +1,20 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011925",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011937",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011925",
+  "version" : "2.2.0-SNAPSHOT.100200000011937",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2301",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2325",
     "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2301"
+    "version" : "4.1.0-SNAPSHOT.2325"
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2102",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2102"
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2598",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2598"
+  }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2426",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2426"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -40,17 +44,9 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2201"
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2561",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2561"
-  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2227",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2227"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2404",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2404"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "mod-settings",
@@ -59,6 +55,10 @@
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2139",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2139"
+  }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2102",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2102"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2092",
     "name" : "edge-users",
@@ -1805,7 +1805,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2301",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2325",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2044,7 +2044,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2301",
+      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2325",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2062,7 +2062,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2561",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2598",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2576,7 +2576,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2561",
+      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2598",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2848,7 +2848,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2404",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2426",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2914,7 +2914,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2404",
+      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2426",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
