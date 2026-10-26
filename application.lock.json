@@ -1,24 +1,28 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011942",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011967",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011942",
+  "version" : "2.2.0-SNAPSHOT.100200000011967",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2328",
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2213",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2213"
+  }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2331",
     "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2328"
+    "version" : "4.1.0-SNAPSHOT.2331"
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2605",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2608",
     "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2605"
+    "version" : "4.1.0-SNAPSHOT.2608"
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2429",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2230",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2230"
+  }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2432",
     "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2429"
-  }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2095",
-    "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2095"
+    "version" : "4.1.0-SNAPSHOT.2432"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -44,14 +48,6 @@
     "name" : "mod-password-validator",
     "version" : "4.1.0-SNAPSHOT.2118"
   }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2201",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2201"
-  }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2227",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2227"
-  }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "mod-settings",
     "version" : "1.4.0-SNAPSHOT.2496"
@@ -63,6 +59,10 @@
     "id" : "mod-locations-1.0.0-SNAPSHOT.2102",
     "name" : "mod-locations",
     "version" : "1.0.0-SNAPSHOT.2102"
+  }, {
+    "id" : "edge-users-2.3.0-SNAPSHOT.2095",
+    "name" : "edge-users",
+    "version" : "2.3.0-SNAPSHOT.2095"
   } ],
   "uiModules" : [ {
     "id" : "folio_developer-11.0.1099000000000419",
@@ -1488,7 +1488,7 @@
       }
     }
   }, {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2201",
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2213",
     "name" : "keycloak-login",
     "requires" : [ {
       "id" : "users",
@@ -1714,7 +1714,7 @@
       "subPermissions" : [ "auth.token.post", "auth.token.sign.post", "auth.refreshtoken.post", "auth.token.refresh.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2201",
+      "dockerImage" : "folioci/mod-login-keycloak:4.1.0-SNAPSHOT.2213",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -1805,7 +1805,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2328",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2331",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2044,7 +2044,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2328",
+      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2331",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2062,7 +2062,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2605",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2608",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2576,7 +2576,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2605",
+      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2608",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2627,7 +2627,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2227",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2230",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2770,7 +2770,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2227",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2230",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2848,7 +2848,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2429",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2432",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2914,7 +2914,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2429",
+      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2432",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
