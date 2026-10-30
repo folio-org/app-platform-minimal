@@ -1,12 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011986",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011987",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011986",
+  "version" : "2.2.0-SNAPSHOT.100200000011987",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2611",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2611"
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2338",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2338"
+  }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2435",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2435"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -36,17 +40,13 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2213"
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2335",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2335"
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2611",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2611"
   }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2230",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2230"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2432",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2432"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "mod-settings",
@@ -65,6 +65,14 @@
     "version" : "2.3.0-SNAPSHOT.2095"
   } ],
   "uiModules" : [ {
+    "id" : "folio_authorization-policies-2.0.1099000000000160",
+    "name" : "folio_authorization-policies",
+    "version" : "2.0.1099000000000160"
+  }, {
+    "id" : "folio_authorization-roles-3.0.1099000000000278",
+    "name" : "folio_authorization-roles",
+    "version" : "3.0.1099000000000278"
+  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -84,14 +92,6 @@
     "id" : "folio_stripes-smart-components-10.1.1099000000000874",
     "name" : "folio_stripes-smart-components",
     "version" : "10.1.1099000000000874"
-  }, {
-    "id" : "folio_authorization-policies-2.0.1099000000000154",
-    "name" : "folio_authorization-policies",
-    "version" : "2.0.1099000000000154"
-  }, {
-    "id" : "folio_authorization-roles-3.0.1099000000000270",
-    "name" : "folio_authorization-roles",
-    "version" : "3.0.1099000000000270"
   } ],
   "dependencies" : [ ],
   "moduleDescriptors" : [ {
@@ -1805,7 +1805,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2335",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2338",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2044,7 +2044,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2335",
+      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2338",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2848,7 +2848,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2432",
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2435",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2914,7 +2914,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2432",
+      "dockerImage" : "folioci/mod-scheduler:4.1.0-SNAPSHOT.2435",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -4625,7 +4625,7 @@
       }
     }
   }, {
-    "id" : "folio_authorization-policies-2.0.1099000000000154",
+    "id" : "folio_authorization-policies-2.0.1099000000000160",
     "name" : "FOLIO app for Authorization Policies",
     "requires" : [ {
       "id" : "policies",
@@ -4660,7 +4660,7 @@
       }
     }
   }, {
-    "id" : "folio_authorization-roles-3.0.1099000000000270",
+    "id" : "folio_authorization-roles-3.0.1099000000000278",
     "name" : "FOLIO app for Authorization Roles",
     "requires" : [ {
       "id" : "capabilities",
