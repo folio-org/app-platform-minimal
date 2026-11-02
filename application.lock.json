@@ -1,16 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000011987",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012001",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000011987",
+  "version" : "2.2.0-SNAPSHOT.100200000012001",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2338",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2338"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2237",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2237"
   }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2435",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2435"
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2105",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2105"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -40,13 +40,17 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2213"
   }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2338",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2338"
+  }, {
     "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2611",
     "name" : "mod-roles-keycloak",
     "version" : "4.1.0-SNAPSHOT.2611"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2230",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2230"
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2435",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2435"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "mod-settings",
@@ -56,23 +60,11 @@
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2139"
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2102",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2102"
-  }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2095",
     "name" : "edge-users",
     "version" : "2.3.0-SNAPSHOT.2095"
   } ],
   "uiModules" : [ {
-    "id" : "folio_authorization-policies-2.0.1099000000000160",
-    "name" : "folio_authorization-policies",
-    "version" : "2.0.1099000000000160"
-  }, {
-    "id" : "folio_authorization-roles-3.0.1099000000000278",
-    "name" : "folio_authorization-roles",
-    "version" : "3.0.1099000000000278"
-  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -92,6 +84,14 @@
     "id" : "folio_stripes-smart-components-10.1.1099000000000874",
     "name" : "folio_stripes-smart-components",
     "version" : "10.1.1099000000000874"
+  }, {
+    "id" : "folio_authorization-policies-2.0.1099000000000160",
+    "name" : "folio_authorization-policies",
+    "version" : "2.0.1099000000000160"
+  }, {
+    "id" : "folio_authorization-roles-3.0.1099000000000278",
+    "name" : "folio_authorization-roles",
+    "version" : "3.0.1099000000000278"
   } ],
   "dependencies" : [ ],
   "moduleDescriptors" : [ {
@@ -2627,7 +2627,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2230",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2237",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2770,7 +2770,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2230",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2237",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -3798,7 +3798,7 @@
       }
     }
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2102",
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2105",
     "name" : "Locations Module",
     "requires" : [ ],
     "provides" : [ {
@@ -4143,7 +4143,7 @@
       "subPermissions" : [ "location-storage.migration.institutions.collection.post", "location-storage.migration.campuses.collection.post", "location-storage.migration.libraries.collection.post", "location-storage.migration.locations.collection.post", "location-storage.migration.service-points.collection.post", "location-storage.migration.service-points-users.collection.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2102",
+      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2105",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
