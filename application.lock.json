@@ -1,12 +1,24 @@
 {
-  "id" : "app-platform-minimal-2.1.20",
+  "id" : "app-platform-minimal-2.1.21",
   "name" : "app-platform-minimal",
-  "version" : "2.1.20",
+  "version" : "2.1.21",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-notes-8.0.1",
-    "name" : "mod-notes",
-    "version" : "8.0.1"
+    "id" : "mod-users-keycloak-4.0.5",
+    "name" : "mod-users-keycloak",
+    "version" : "4.0.5"
+  }, {
+    "id" : "mod-roles-keycloak-4.0.6",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.0.6"
+  }, {
+    "id" : "mod-scheduler-4.0.4",
+    "name" : "mod-scheduler",
+    "version" : "4.0.4"
+  }, {
+    "id" : "mod-okapi-facade-4.0.2",
+    "name" : "mod-okapi-facade",
+    "version" : "4.0.2"
   }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
@@ -36,25 +48,13 @@
     "name" : "mod-login-keycloak",
     "version" : "4.0.4"
   }, {
-    "id" : "mod-users-keycloak-4.0.4",
-    "name" : "mod-users-keycloak",
-    "version" : "4.0.4"
-  }, {
-    "id" : "mod-roles-keycloak-4.0.5",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.0.5"
-  }, {
-    "id" : "mod-scheduler-4.0.3",
-    "name" : "mod-scheduler",
-    "version" : "4.0.3"
+    "id" : "mod-notes-8.0.1",
+    "name" : "mod-notes",
+    "version" : "8.0.1"
   }, {
     "id" : "mod-settings-1.3.3",
     "name" : "mod-settings",
     "version" : "1.3.3"
-  }, {
-    "id" : "mod-okapi-facade-4.0.1",
-    "name" : "mod-okapi-facade",
-    "version" : "4.0.1"
   }, {
     "id" : "edge-users-2.2.1",
     "name" : "edge-users",
@@ -1801,7 +1801,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.0.4",
+    "id" : "mod-users-keycloak-4.0.5",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2049,7 +2049,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.collection.get", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-users-keycloak:4.0.4",
+      "dockerImage" : "folioorg/mod-users-keycloak:4.0.5",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2067,7 +2067,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.0.5",
+    "id" : "mod-roles-keycloak-4.0.6",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2573,7 +2573,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-roles-keycloak:4.0.5",
+      "dockerImage" : "folioorg/mod-roles-keycloak:4.0.6",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -2812,7 +2812,7 @@
       }
     }
   }, {
-    "id" : "mod-scheduler-4.0.3",
+    "id" : "mod-scheduler-4.0.4",
     "name" : "Scheduler",
     "provides" : [ {
       "id" : "scheduler",
@@ -2878,7 +2878,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-scheduler:4.0.3",
+      "dockerImage" : "folioorg/mod-scheduler:4.0.4",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -3144,7 +3144,7 @@
       }
     }
   }, {
-    "id" : "mod-okapi-facade-4.0.1",
+    "id" : "mod-okapi-facade-4.0.2",
     "name" : "Okapi facade",
     "requires" : [ ],
     "provides" : [ {
@@ -3607,7 +3607,7 @@
       "subPermissions" : [ "okapi.deploy", "okapi.modules", "okapi.tenants", "okapi.tenantmodules", "okapi.timers", "okapi.interfaces", "okapi.version.get", "okapi.env" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/mod-okapi-facade:4.0.1",
+      "dockerImage" : "folioorg/mod-okapi-facade:4.0.2",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
