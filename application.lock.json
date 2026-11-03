@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012003",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012005",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012003",
+  "version" : "2.2.0-SNAPSHOT.100200000012005",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-19.7.0-SNAPSHOT.2173",
-    "name" : "mod-users",
-    "version" : "19.7.0-SNAPSHOT.2173"
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2367",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2367"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -20,6 +20,10 @@
     "name" : "mod-tags",
     "version" : "3.1.0-SNAPSHOT.2095"
   }, {
+    "id" : "mod-users-19.7.0-SNAPSHOT.2173",
+    "name" : "mod-users",
+    "version" : "19.7.0-SNAPSHOT.2173"
+  }, {
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
     "name" : "mod-users-bl",
     "version" : "8.1.0-SNAPSHOT.2017"
@@ -31,10 +35,6 @@
     "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2213",
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2213"
-  }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2364",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2364"
   }, {
     "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2638",
     "name" : "mod-roles-keycloak",
@@ -65,10 +65,6 @@
     "version" : "2.3.0-SNAPSHOT.2095"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-core-11.2.1099000000002077",
-    "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000002077"
-  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -76,6 +72,10 @@
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
     "version" : "10.0.1099000000000115"
+  }, {
+    "id" : "folio_stripes-core-11.2.1099000000002077",
+    "name" : "folio_stripes-core",
+    "version" : "11.2.1099000000002077"
   }, {
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
@@ -1805,7 +1805,7 @@
       "dockerCMD" : [ "verify.user=true" ]
     }
   }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2364",
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2367",
     "name" : "Users business logic (with Keycloak)",
     "requires" : [ {
       "id" : "users",
@@ -2044,7 +2044,7 @@
       "subPermissions" : [ "users-keycloak.migrations.post", "users-keycloak.migrations.get", "users-keycloak.migrations.delete", "users-keycloak.idp-migrations.post", "users-keycloak.idp-migrations.delete", "users-keycloak.item.get", "users-keycloak.item.post", "users-keycloak.item.put", "users-keycloak.item.delete", "users-keycloak.password-reset-link.generate", "users-keycloak.password-reset-link.reset", "users-keycloak.password-reset-link.validate", "users-keycloak.read.restricted", "users-keycloak.read.basic", "users-keycloak.users.permissions.collection.get", "users-keycloak.auth-users.item.get", "users-keycloak.auth-users.item.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2364",
+      "dockerImage" : "folioci/mod-users-keycloak:4.1.0-SNAPSHOT.2367",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
