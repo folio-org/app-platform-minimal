@@ -1,13 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012016",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012017",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012016",
+  "version" : "2.2.0-SNAPSHOT.100200000012017",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2100",
-    "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2100"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2030"
@@ -63,8 +59,16 @@
     "id" : "mod-locations-1.0.0-SNAPSHOT.2105",
     "name" : "mod-locations",
     "version" : "1.0.0-SNAPSHOT.2105"
+  }, {
+    "id" : "edge-users-2.3.0-SNAPSHOT.2100",
+    "name" : "edge-users",
+    "version" : "2.3.0-SNAPSHOT.2100"
   } ],
   "uiModules" : [ {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000896",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000896"
+  }, {
     "id" : "folio_developer-11.0.1099000000000419",
     "name" : "folio_developer",
     "version" : "11.0.1099000000000419"
@@ -80,10 +84,6 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
-  }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000874",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000874"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000160",
     "name" : "folio_authorization-policies",
@@ -4593,7 +4593,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000874",
+    "id" : "folio_stripes-smart-components-10.1.1099000000000896",
     "name" : "Connected Stripes components",
     "requires" : [ {
       "id" : "notes",
