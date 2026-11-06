@@ -1,16 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012013",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012016",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012013",
+  "version" : "2.2.0-SNAPSHOT.100200000012016",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2370",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2370"
-  }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2648",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2648"
+    "id" : "edge-users-2.3.0-SNAPSHOT.2100",
+    "name" : "edge-users",
+    "version" : "2.3.0-SNAPSHOT.2100"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -40,6 +36,14 @@
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2213"
   }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2370",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2370"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2648",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2648"
+  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2237",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2237"
@@ -59,10 +63,6 @@
     "id" : "mod-locations-1.0.0-SNAPSHOT.2105",
     "name" : "mod-locations",
     "version" : "1.0.0-SNAPSHOT.2105"
-  }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2095",
-    "name" : "edge-users",
-    "version" : "2.3.0-SNAPSHOT.2095"
   } ],
   "uiModules" : [ {
     "id" : "folio_developer-11.0.1099000000000419",
@@ -3685,7 +3685,7 @@
       }
     }
   }, {
-    "id" : "edge-users-2.3.0-SNAPSHOT.2095",
+    "id" : "edge-users-2.3.0-SNAPSHOT.2100",
     "name" : "Retrieve and create users information Edge API",
     "requires" : [ {
       "id" : "users",
@@ -3780,7 +3780,7 @@
       "required" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2095",
+      "dockerImage" : "folioci/edge-users:2.3.0-SNAPSHOT.2100",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
