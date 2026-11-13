@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012041",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012044",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012041",
+  "version" : "2.2.0-SNAPSHOT.100200000012044",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2667",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2667"
+    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2137",
+    "name" : "mod-password-validator",
+    "version" : "4.1.0-SNAPSHOT.2137"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -28,10 +28,6 @@
     "name" : "mod-users-bl",
     "version" : "8.1.0-SNAPSHOT.2017"
   }, {
-    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
-    "name" : "mod-password-validator",
-    "version" : "4.1.0-SNAPSHOT.2118"
-  }, {
     "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2213",
     "name" : "mod-login-keycloak",
     "version" : "4.1.0-SNAPSHOT.2213"
@@ -39,6 +35,10 @@
     "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2373",
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2373"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2667",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2667"
   }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2245",
     "name" : "mod-notes",
@@ -1372,7 +1372,7 @@
       }
     }
   }, {
-    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2118",
+    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2137",
     "name" : "Password Validator Module",
     "requires" : [ {
       "id" : "users",
@@ -1446,7 +1446,7 @@
       "subPermissions" : [ "validation.validate.post", "validation.rules.item.post", "validation.rules.item.put", "validation.rules.item.get" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-password-validator:4.1.0-SNAPSHOT.2118",
+      "dockerImage" : "folioci/mod-password-validator:4.1.0-SNAPSHOT.2137",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
