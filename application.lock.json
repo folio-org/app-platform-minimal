@@ -1,13 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012044",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012046",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012044",
+  "version" : "2.2.0-SNAPSHOT.100200000012046",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2137",
-    "name" : "mod-password-validator",
-    "version" : "4.1.0-SNAPSHOT.2137"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2030"
@@ -27,6 +23,10 @@
     "id" : "mod-users-bl-8.1.0-SNAPSHOT.2017",
     "name" : "mod-users-bl",
     "version" : "8.1.0-SNAPSHOT.2017"
+  }, {
+    "id" : "mod-password-validator-4.1.0-SNAPSHOT.2137",
+    "name" : "mod-password-validator",
+    "version" : "4.1.0-SNAPSHOT.2137"
   }, {
     "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2213",
     "name" : "mod-login-keycloak",
@@ -65,9 +65,9 @@
     "version" : "2.3.0-SNAPSHOT.2100"
   } ],
   "uiModules" : [ {
-    "id" : "folio_developer-11.0.1099000000000419",
+    "id" : "folio_developer-11.0.1099000000000428",
     "name" : "folio_developer",
-    "version" : "11.0.1099000000000419"
+    "version" : "11.0.1099000000000428"
   }, {
     "id" : "folio_tags-10.0.1099000000000115",
     "name" : "folio_tags",
@@ -4219,7 +4219,7 @@
     }
   } ],
   "uiModuleDescriptors" : [ {
-    "id" : "folio_developer-11.0.1099000000000419",
+    "id" : "folio_developer-11.0.1099000000000428",
     "name" : "Developer settings",
     "requires" : [ {
       "id" : "settings",
