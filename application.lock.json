@@ -1,25 +1,9 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012060",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012061",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012060",
+  "version" : "2.2.0-SNAPSHOT.100200000012061",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2256",
-    "name" : "mod-login-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2256"
-  }, {
-    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2376",
-    "name" : "mod-users-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2376"
-  }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2672",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2672"
-  }, {
-    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2478",
-    "name" : "mod-scheduler",
-    "version" : "4.1.0-SNAPSHOT.2478"
-  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2030"
@@ -44,9 +28,25 @@
     "name" : "mod-password-validator",
     "version" : "4.1.0-SNAPSHOT.2137"
   }, {
+    "id" : "mod-login-keycloak-4.1.0-SNAPSHOT.2256",
+    "name" : "mod-login-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2256"
+  }, {
+    "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2376",
+    "name" : "mod-users-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2376"
+  }, {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2672",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2672"
+  }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2248",
     "name" : "mod-notes",
     "version" : "8.1.0-SNAPSHOT.2248"
+  }, {
+    "id" : "mod-scheduler-4.1.0-SNAPSHOT.2478",
+    "name" : "mod-scheduler",
+    "version" : "4.1.0-SNAPSHOT.2478"
   }, {
     "id" : "mod-settings-1.4.0-SNAPSHOT.2496",
     "name" : "mod-settings",
@@ -65,13 +65,9 @@
     "version" : "2.3.0-SNAPSHOT.2100"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-core-11.2.1099000000002128",
+    "id" : "folio_stripes-core-11.2.1099000000002133",
     "name" : "folio_stripes-core",
-    "version" : "11.2.1099000000002128"
-  }, {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000912",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000912"
+    "version" : "11.2.1099000000002133"
   }, {
     "id" : "folio_developer-11.0.1099000000000428",
     "name" : "folio_developer",
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000912",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000912"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000160",
     "name" : "folio_authorization-policies",
@@ -4461,7 +4461,7 @@
       }
     }
   }, {
-    "id" : "folio_stripes-core-11.2.1099000000002128",
+    "id" : "folio_stripes-core-11.2.1099000000002133",
     "name" : "The starting point for Stripes applications",
     "requires" : [ {
       "id" : "users-bl",
