@@ -1,7 +1,7 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012064",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012066",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012064",
+  "version" : "2.2.0-SNAPSHOT.100200000012066",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
@@ -65,17 +65,13 @@
     "version" : "2.3.0-SNAPSHOT.2100"
   } ],
   "uiModules" : [ {
-    "id" : "folio_stripes-smart-components-10.1.1099000000000916",
-    "name" : "folio_stripes-smart-components",
-    "version" : "10.1.1099000000000916"
-  }, {
-    "id" : "folio_developer-11.0.1099000000000428",
+    "id" : "folio_developer-11.0.1099000000000431",
     "name" : "folio_developer",
-    "version" : "11.0.1099000000000428"
+    "version" : "11.0.1099000000000431"
   }, {
-    "id" : "folio_tags-10.0.1099000000000115",
+    "id" : "folio_tags-11.0.1099000000000128",
     "name" : "folio_tags",
-    "version" : "10.0.1099000000000115"
+    "version" : "11.0.1099000000000128"
   }, {
     "id" : "folio_stripes-core-11.2.1099000000002139",
     "name" : "folio_stripes-core",
@@ -84,6 +80,10 @@
     "id" : "folio_notes-12.0.1099000000000187",
     "name" : "folio_notes",
     "version" : "12.0.1099000000000187"
+  }, {
+    "id" : "folio_stripes-smart-components-10.1.1099000000000916",
+    "name" : "folio_stripes-smart-components",
+    "version" : "10.1.1099000000000916"
   }, {
     "id" : "folio_authorization-policies-2.0.1099000000000160",
     "name" : "folio_authorization-policies",
@@ -4222,7 +4222,7 @@
     }
   } ],
   "uiModuleDescriptors" : [ {
-    "id" : "folio_developer-11.0.1099000000000428",
+    "id" : "folio_developer-11.0.1099000000000431",
     "name" : "Developer settings",
     "requires" : [ {
       "id" : "settings",
@@ -4389,7 +4389,7 @@
       }
     }
   }, {
-    "id" : "folio_tags-10.0.1099000000000115",
+    "id" : "folio_tags-11.0.1099000000000128",
     "name" : "Tags manager",
     "requires" : [ {
       "id" : "tags",
@@ -4408,12 +4408,12 @@
     }, {
       "permissionName" : "ui-tags.settings.view",
       "displayName" : "Settings (Tags): Can view tags settings",
-      "subPermissions" : [ "settings.tags.enabled", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.global.read.ui-tags.tags.manage", "configuration.entries.collection.get" ],
+      "subPermissions" : [ "settings.tags.enabled", "mod-settings.entries.collection.get", "mod-settings.entries.item.get", "mod-settings.global.read.ui-tags.tags.manage" ],
       "visible" : true
     }, {
       "permissionName" : "ui-tags.settings.all",
       "displayName" : "Settings (Tags): Can enable or disable tags for all apps",
-      "subPermissions" : [ "ui-tags.settings.view", "mod-settings.entries.item.post", "mod-settings.entries.item.put", "mod-settings.global.write.ui-tags.tags.manage", "configuration.entries.item.put", "configuration.entries.item.post" ],
+      "subPermissions" : [ "ui-tags.settings.view", "mod-settings.entries.item.post", "mod-settings.entries.item.put", "mod-settings.global.write.ui-tags.tags.manage" ],
       "visible" : true
     }, {
       "permissionName" : "ui-tags.all",
