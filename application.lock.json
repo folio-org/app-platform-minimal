@@ -1,9 +1,13 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012066",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012069",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012066",
+  "version" : "2.2.0-SNAPSHOT.100200000012069",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2675",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2675"
+  }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
     "version" : "5.14.0-SNAPSHOT.2030"
@@ -35,10 +39,6 @@
     "id" : "mod-users-keycloak-4.1.0-SNAPSHOT.2376",
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2376"
-  }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2672",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2672"
   }, {
     "id" : "mod-notes-8.1.0-SNAPSHOT.2248",
     "name" : "mod-notes",
@@ -2065,7 +2065,7 @@
       }
     }
   }, {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2672",
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2675",
     "name" : "roles-keycloak",
     "requires" : [ {
       "id" : "permissions",
@@ -2579,7 +2579,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2672",
+      "dockerImage" : "folioci/mod-roles-keycloak:4.1.0-SNAPSHOT.2675",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
