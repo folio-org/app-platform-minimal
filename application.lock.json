@@ -1,12 +1,16 @@
 {
-  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012069",
+  "id" : "app-platform-minimal-2.2.0-SNAPSHOT.100200000012080",
   "name" : "app-platform-minimal",
-  "version" : "2.2.0-SNAPSHOT.100200000012069",
+  "version" : "2.2.0-SNAPSHOT.100200000012080",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2675",
-    "name" : "mod-roles-keycloak",
-    "version" : "4.1.0-SNAPSHOT.2675"
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2251",
+    "name" : "mod-notes",
+    "version" : "8.1.0-SNAPSHOT.2251"
+  }, {
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2114",
+    "name" : "mod-locations",
+    "version" : "1.0.0-SNAPSHOT.2114"
   }, {
     "id" : "mod-configuration-5.14.0-SNAPSHOT.2030",
     "name" : "mod-configuration",
@@ -40,9 +44,9 @@
     "name" : "mod-users-keycloak",
     "version" : "4.1.0-SNAPSHOT.2376"
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2248",
-    "name" : "mod-notes",
-    "version" : "8.1.0-SNAPSHOT.2248"
+    "id" : "mod-roles-keycloak-4.1.0-SNAPSHOT.2675",
+    "name" : "mod-roles-keycloak",
+    "version" : "4.1.0-SNAPSHOT.2675"
   }, {
     "id" : "mod-scheduler-4.1.0-SNAPSHOT.2478",
     "name" : "mod-scheduler",
@@ -55,10 +59,6 @@
     "id" : "mod-okapi-facade-4.1.0-SNAPSHOT.2171",
     "name" : "mod-okapi-facade",
     "version" : "4.1.0-SNAPSHOT.2171"
-  }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2111",
-    "name" : "mod-locations",
-    "version" : "1.0.0-SNAPSHOT.2111"
   }, {
     "id" : "edge-users-2.3.0-SNAPSHOT.2100",
     "name" : "edge-users",
@@ -2630,7 +2630,7 @@
       }
     }
   }, {
-    "id" : "mod-notes-8.1.0-SNAPSHOT.2248",
+    "id" : "mod-notes-8.1.0-SNAPSHOT.2251",
     "name" : "Notes",
     "requires" : [ {
       "id" : "users",
@@ -2773,7 +2773,7 @@
       "visible" : false
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2248",
+      "dockerImage" : "folioci/mod-notes:8.1.0-SNAPSHOT.2251",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -3801,7 +3801,7 @@
       }
     }
   }, {
-    "id" : "mod-locations-1.0.0-SNAPSHOT.2111",
+    "id" : "mod-locations-1.0.0-SNAPSHOT.2114",
     "name" : "Locations Module",
     "requires" : [ ],
     "provides" : [ {
@@ -4146,7 +4146,7 @@
       "subPermissions" : [ "location-storage.migration.institutions.collection.post", "location-storage.migration.campuses.collection.post", "location-storage.migration.libraries.collection.post", "location-storage.migration.locations.collection.post", "location-storage.migration.service-points.collection.post", "location-storage.migration.service-points-users.collection.post" ]
     } ],
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2111",
+      "dockerImage" : "folioci/mod-locations:1.0.0-SNAPSHOT.2114",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
