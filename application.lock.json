@@ -1,12 +1,12 @@
 {
-  "id" : "app-platform-minimal-2.1.24",
+  "id" : "app-platform-minimal-2.1.25",
   "name" : "app-platform-minimal",
-  "version" : "2.1.24",
+  "version" : "2.1.25",
   "description" : "Minimal FOLIO platform installation",
   "modules" : [ {
-    "id" : "mod-password-validator-4.0.1",
-    "name" : "mod-password-validator",
-    "version" : "4.0.1"
+    "id" : "edge-users-2.2.3",
+    "name" : "edge-users",
+    "version" : "2.2.3"
   }, {
     "id" : "mod-configuration-5.13.0",
     "name" : "mod-configuration",
@@ -27,6 +27,10 @@
     "id" : "mod-users-bl-8.0.0",
     "name" : "mod-users-bl",
     "version" : "8.0.0"
+  }, {
+    "id" : "mod-password-validator-4.0.1",
+    "name" : "mod-password-validator",
+    "version" : "4.0.1"
   }, {
     "id" : "mod-login-keycloak-4.0.4",
     "name" : "mod-login-keycloak",
@@ -55,19 +59,15 @@
     "id" : "mod-okapi-facade-4.0.2",
     "name" : "mod-okapi-facade",
     "version" : "4.0.2"
-  }, {
-    "id" : "edge-users-2.2.2",
-    "name" : "edge-users",
-    "version" : "2.2.2"
   } ],
   "uiModules" : [ {
+    "id" : "folio_tags-10.0.1",
+    "name" : "folio_tags",
+    "version" : "10.0.1"
+  }, {
     "id" : "folio_developer-11.0.0",
     "name" : "folio_developer",
     "version" : "11.0.0"
-  }, {
-    "id" : "folio_tags-10.0.0",
-    "name" : "folio_tags",
-    "version" : "10.0.0"
   }, {
     "id" : "folio_stripes-core-11.1.8",
     "name" : "folio_stripes-core",
@@ -3649,7 +3649,7 @@
       }
     }
   }, {
-    "id" : "edge-users-2.2.2",
+    "id" : "edge-users-2.2.3",
     "name" : "Retrieve and create users information Edge API",
     "requires" : [ {
       "id" : "users",
@@ -3658,7 +3658,7 @@
     "provides" : [ ],
     "permissionSets" : [ ],
     "launchDescriptor" : {
-      "dockerImage" : "folioorg/edge-users:2.2.2",
+      "dockerImage" : "folioorg/edge-users:2.2.3",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
@@ -3839,7 +3839,7 @@
       }
     }
   }, {
-    "id" : "folio_tags-10.0.0",
+    "id" : "folio_tags-10.0.1",
     "name" : "Tags manager",
     "requires" : [ {
       "id" : "tags",
@@ -3895,7 +3895,21 @@
       "permissionName" : "mod-settings.global.write.ui-tags.tags.manage",
       "displayName" : "Settings (Tags): Write the tag settings",
       "visible" : false
-    } ]
+    } ],
+    "metadata" : {
+      "stripes" : {
+        "actsAs" : [ "settings" ],
+        "displayName" : "ui-tags.meta.title",
+        "route" : "/tags",
+        "hasSettings" : true,
+        "queryResource" : "query",
+        "icons" : [ {
+          "name" : "app",
+          "alt" : "",
+          "title" : "Tags"
+        } ]
+      }
+    }
   }, {
     "id" : "folio_stripes-core-11.1.8",
     "name" : "The starting point for Stripes applications",
